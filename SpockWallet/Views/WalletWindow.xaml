@@ -1,0 +1,147 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:data="clr-namespace:SpockWallet.Data"
+        xmlns:vm="clr-namespace:SpockWallet.ViewModels.WalletModels;assembly=SpockWallet"
+        xmlns:localizations="clr-namespace:SpockWallet.Localizations;assembly=SpockWallet"
+        xmlns:controls="clr-namespace:SpockWallet.Views;assembly=SpockWallet"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        Width="1000"
+        x:Class="SpockWallet.Views.WalletWindow"
+        WindowStartupLocation="CenterScreen"
+        Icon="resm:SpockWallet.Assets.favicon.ico?assembly=SpockWallet"
+        Title="Spock Wallet">
+  <Window.Styles>
+    <Style Selector="TabControl">
+      <Setter Property="Background" Value="#FFFFFF"/>
+    </Style>
+    <Style Selector="TabControl WrapPanel">
+      <Setter Property="Background" Value="#F6F6F6"/>
+    </Style>
+    <Style Selector="TabItem">
+      <Setter Property="FontSize" Value="12"/>
+      <Setter Property="Height" Value="55"/>
+      <Setter Property="VerticalAlignment" Value="Center"/>
+      <Setter Property="Background" Value="#F6F6F6"/>
+      <Setter Property="Foreground" Value="#3498db"/>
+      <Setter Property="Margin" Value="10 2 10 0"/>
+      <Setter Property="BorderThickness" Value="0,0,0,3"/>
+    </Style>
+    <Style Selector="TabItem:pointerover/template/ContentPresenter#PART_ContentPresenter">
+      <Setter Property="Background" Value="#F6F6F6"/>
+      <Setter Property="BorderBrush" Value="#7dc5eb"/>
+    </Style>
+    <Style Selector="TabItem:focus">
+      <Setter Property="Foreground" Value="#2B579A"/>
+    </Style>
+    <Style Selector="TabItem:focus/template/ContentPresenter#PART_ContentPresenter">
+      <Setter Property="Background" Value="#F6F6F6"/>
+    </Style>
+    <Style Selector="TabItem:selected">
+      <Setter Property="Foreground" Value="#2B579A"/>
+      <Setter Property="BorderBrush" Value="#3498db"/>
+    </Style>
+    <Style Selector="TabItem:selected/template/ContentPresenter#PART_ContentPresenter">
+      <Setter Property="Background" Value="#F6F6F6"/>
+    </Style>
+  </Window.Styles>
+  <Window.DataContext>
+    <vm:WalletWindowViewModel />
+  </Window.DataContext>
+  <Grid RowDefinitions="*,Auto">
+    <TabControl DockPanel.Dock="Top" VerticalContentAlignment="Stretch" VerticalAlignment="Stretch">
+      <TabItem VerticalContentAlignment="Center">
+        <TabItem.Header>
+          <StackPanel Orientation="Horizontal">
+            <Image Width="20" Height="20" Source="resm:SpockWallet.Assets.wallet.png?assembly=SpockWallet"/>
+            <TextBlock Margin="12,0,0,0" VerticalAlignment="Center" localizations:LocalizationAttachedPropertyHolder.Uid="Wallets" Text="WALLETS"/>
+          </StackPanel>
+        </TabItem.Header>
+        <DockPanel Margin="10,10,10,10">
+          <Border DockPanel.Dock="Top" Padding="10" BorderBrush="#C8E1FF" Background="#F1F8FF" BorderThickness="1" CornerRadius="6">
+            <Grid ColumnDefinitions="Auto,*,Auto,Auto">
+              <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+                <TextBlock Text="{Binding CurrentAssetsViewModel.CoinType}" FontSize="18" VerticalAlignment="Center"/>
+
+                <Image VerticalAlignment="Center" Source="resm:SpockWallet.Assets.select.png?assembly=SpockWallet" Width="16" Height="16" Margin="8,0,0,0"/>
+                <Menu Grid.Column="1" VerticalAlignment="Center" Foreground="#337ab7" BorderThickness="0" Items="{Binding MenuItems}">
+                  <Menu.Styles>
+                    <Style Selector="MenuItem">
+                      <Setter Property="Header" Value="{Binding Header}"/>
+                      <Setter Property="Items" Value="{Binding Items}"/>
+                      <Setter Property="Command" Value="{Binding Command}"/>
+                      <Setter Property="CommandParameter" Value="{Binding CommandParameter}"/>
+                    </Style>
+                  </Menu.Styles>
+                </Menu>
+              </StackPanel>
+              <!--Token下拉列表以显示用户代币资产-->
+              <Button VerticalAlignment="Center" Padding="6" Grid.Column="2" Foreground="#337ab7" Background="Transparent" BorderThickness="0" Command="{Binding CreateWallet}">
+                <StackPanel Orientation="Horizontal">
+                  <Image VerticalAlignment="Center" Source="resm:SpockWallet.Assets.create.png?assembly=SpockWallet" Width="16" Height="16"/>
+                  <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="CreateWallet" Margin="6,0,0,0" VerticalAlignment="Center" Text="Create Wallet"/>
+                </StackPanel>
+              </Button>
+              <Button VerticalAlignment="Center" Padding="6" Grid.Column="3" Margin="12,0,0,0" Foreground="#337ab7" BorderThickness="0" Background="Transparent" Command="{Binding ImportWallet}">
+                <StackPanel Orientation="Horizontal">
+                  <Image VerticalAlignment="Center" Source="resm:SpockWallet.Assets.import.png?assembly=SpockWallet" Width="16" Height="16"/>
+                  <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="ImportWallet" Margin="6,0,0,0" VerticalAlignment="Center" Text="Import Wallet"/>
+                </StackPanel>
+              </Button>
+            </Grid>
+          </Border>
+          <controls:WalletUserControl DockPanel.Dock="Bottom" Margin="0,5,0,0" DataContext="{Binding WalletsUserControlViewModel}"/>
+        </DockPanel>
+      </TabItem>
+      <TabItem VerticalContentAlignment="Center">
+        <TabItem.Header>
+          <StackPanel Orientation="Horizontal">
+            <Image Width="20" Height="20" Source="resm:SpockWallet.Assets.history.png?assembly=SpockWallet"/>
+            <TextBlock VerticalAlignment="Center" Margin="12,0,0,0" localizations:LocalizationAttachedPropertyHolder.Uid="Hsitory" Text="HISTROY"/>
+          </StackPanel>
+        </TabItem.Header>
+        <controls:TransactionUserControl DataContext="{Binding TransactionsViewModel}"/>
+      </TabItem>
+      <TabItem VerticalContentAlignment="Center">
+        <TabItem.Header>
+          <StackPanel Orientation="Horizontal">
+            <Image Width="20" Height="20" Source="resm:SpockWallet.Assets.contract.png?assembly=SpockWallet"/>
+            <TextBlock VerticalAlignment="Center" Margin="12,0,0,0" localizations:LocalizationAttachedPropertyHolder.Uid="Contract" Text="CONTRACT"/>
+          </StackPanel>
+        </TabItem.Header>
+        <controls:ContractUserControl/>
+      </TabItem>
+      <TabItem VerticalContentAlignment="Center">
+        <TabItem.Header>
+          <StackPanel Orientation="Horizontal">
+            <Image Width="20" Height="20" Source="resm:SpockWallet.Assets.setting.png?assembly=SpockWallet"/>
+            <TextBlock VerticalAlignment="Center" Margin="12,0,0,0" localizations:LocalizationAttachedPropertyHolder.Uid="Setting" Text="SETTING"/>
+          </StackPanel>
+        </TabItem.Header>
+        <controls:SettingUserControl DataContext="{Binding SettingUserControlViewModel}" />
+      </TabItem>
+    </TabControl>
+    <Border Grid.Row="1" DockPanel.Dock="Bottom" BorderThickness="1" BorderBrush="#DDDDDD" Background="#f9f9f9" Height="30">
+      <Grid ColumnDefinitions="*,Auto">
+        <StackPanel Margin="4" Orientation="Horizontal" VerticalAlignment="Center">
+          <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="BlockHeight" Text="Block Height" />
+          <TextBlock Margin="8,0,0,0" Foreground="#3498db" Text="{Binding BlockHeight}"/>
+          <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="TotalBalance" Margin="16,0,0,0" Text="Total Balance" />
+          <TextBlock Margin="8,0,0,0" Foreground="Goldenrod" Text="{Binding TotalBalance}"/>
+          <TextBlock Foreground="Goldenrod" Margin="3,0,0,0" Opacity="0.6" Text="{Binding CurrentAssetsViewModel.CoinType}"/>
+          
+          <TextBlock IsVisible="{Binding IsSyncLostBlock}" Foreground="#e0620d" localizations:LocalizationAttachedPropertyHolder.Uid="SyncTip" Margin="16,0,0,0" Text="Synchronized lost blocks, balances and transactions may not be accurate" />
+        </StackPanel>
+        <StackPanel IsVisible="{Binding !IsSyncFailed}" Orientation="Horizontal" Grid.Column="1" Margin="0,0,8,0" VerticalAlignment="Center">
+          <Image VerticalAlignment="Center" RenderTransform="{Binding RotateTransform}" Width="18" Height="18" Source="resm:SpockWallet.Assets.sync.png?assembly=SpockWallet"/>
+          <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="Syncing" Foreground="Green" VerticalAlignment="Center" Margin="4,0,0,0" Text="Syncing"/>
+        </StackPanel>
+        <StackPanel IsVisible="{Binding IsSyncFailed}" Orientation="Horizontal" Grid.Column="1" Margin="0,0,8,0" VerticalAlignment="Center">
+          <Image VerticalAlignment="Center" Width="32" Height="32" Source="resm:SpockWallet.Assets.syncfail.png?assembly=SpockWallet"/>
+          <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="SyncFailed" Foreground="#d81e06" VerticalAlignment="Center" Margin="4,0,0,0" Text="Sync Failed"/>
+        </StackPanel>
+      </Grid>
+    </Border>
+  </Grid>
+</Window>

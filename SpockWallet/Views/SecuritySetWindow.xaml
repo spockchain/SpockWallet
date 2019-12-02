@@ -1,0 +1,30 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        Width="450"
+        Height="350"
+        MaxWidth="450"
+        MaxHeight="350"
+        MinWidth="450"
+        MinHeight="350"
+        CanResize="False"
+        xmlns:localizations="clr-namespace:SpockWallet.Localizations;assembly=SpockWallet"
+        x:Class="SpockWallet.Views.SecuritySetWindow"
+        Icon="resm:SpockWallet.Assets.favicon.ico"
+        WindowStartupLocation="CenterScreen"
+        Title="Set Password"
+        Background="#143f6f">
+  <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+    <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="SetPassword" Text="Set Password" Foreground="White" FontSize="14"/>
+    <TextBox Text="{Binding Password}" PasswordChar="#" Width="250" Margin="0,3,0,0" BorderBrush="#143f6f"/>
+
+    <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="InputPasswordAgain" Text="Input Password Again" Foreground="White" Margin="0,12,0,0" FontSize="14"/>
+    <TextBox Text="{Binding PasswordAgain}" PasswordChar="#" Width="250" Margin="0,3,0,0" BorderBrush="#143f6f"/>
+    
+    <TextBlock Margin="0,4,0,0" Text="{Binding ErrorMsg}" Foreground="#ffd600"/>
+
+    <Button localizations:LocalizationAttachedPropertyHolder.Uid="Save" Content="Save" Margin="0,12,0,0" HorizontalAlignment="Right" Width="80" Background="White" Command="{Binding Save}" BorderBrush="White" />
+  </StackPanel>
+</Window>

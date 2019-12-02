@@ -1,0 +1,74 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="550"
+        Width="600"
+        x:Class="SpockWallet.Views.SendTransactionWindows"
+        xmlns:conv="clr-namespace:SpockWallet.Converters;assembly=SpockWallet"
+        xmlns:localizations="clr-namespace:SpockWallet.Localizations;assembly=SpockWallet"
+        WindowStartupLocation="CenterScreen"
+        Icon="resm:SpockWallet.Assets.favicon.ico?assembly=SpockWallet"
+        Title="Send Transaction">
+  <Window.Resources>
+    <conv:NullableDecimalConverter x:Key="nullableDecimalConverter"/>
+    <conv:NullableUInt64Converter x:Key="nullableUInt64Converter"/>
+  </Window.Resources>
+  <StackPanel>
+    <Border Background="#3498db" Height="100" VerticalAlignment="Top">
+      <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+        <TextBlock FontSize="14" Foreground="White" Text="{Binding Address}"/>
+        <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="SendTransaction" FontSize="24" Foreground="White" Text="Send Transaction"/>
+      </StackPanel>
+    </Border>
+    <Grid VerticalAlignment="Center" Margin="0,12,0,0" Background="#f6f6f6" ColumnDefinitions="*,Auto" Width="448" HorizontalAlignment="Center">
+      <StackPanel Margin="8" Orientation="Horizontal">
+        <TextBlock FontSize="18" Foreground="Goldenrod" Text="{Binding Balance}"/>
+        <TextBlock Margin="3,0,0,0" FontSize="18" Opacity="0.6" Foreground="Goldenrod" Text="{Binding CurrentAssetsViewModel.CoinType}"/>
+      </StackPanel>
+      <Button IsVisible="False" Margin="8" Grid.Column="1" VerticalAlignment="Center" Background="Transparent" BorderThickness="0" Foreground="#3498db" Command="{Binding BatchTransfer}">
+        <StackPanel Orientation="Horizontal">
+          <Image VerticalAlignment="Center" Source="resm:SpockWallet.Assets.batch_transfer.png?assembly=SpockWallet" Width="16" Height="16"/>
+          <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="BatchTransfer" Margin="6,0,0,0" VerticalAlignment="Center" Text="Batch Transfer"/>
+        </StackPanel>
+      </Button>
+      <StackPanel Grid.Column="1" Orientation="Horizontal">
+        <Image VerticalAlignment="Center" Source="resm:SpockWallet.Assets.select.png?assembly=SpockWallet" Width="16" Height="16"/>
+        <Menu Grid.Column="1" VerticalAlignment="Center" Foreground="#337ab7" BorderThickness="0" Items="{Binding MenuItems}">
+          <Menu.Styles>
+            <Style Selector="MenuItem">
+              <Setter Property="Header" Value="{Binding Header}"/>
+              <Setter Property="Items" Value="{Binding Items}"/>
+              <Setter Property="Command" Value="{Binding Command}"/>
+              <Setter Property="CommandParameter" Value="{Binding CommandParameter}"/>
+            </Style>
+          </Menu.Styles>
+        </Menu>
+      </StackPanel>
+    </Grid>
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Top" ColumnDefinitions="140,300" RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto" Margin="16">
+      <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="ToAddress" VerticalAlignment="Center" Text="To Address:" Classes="formLabel" Grid.Column="0" Grid.Row="0" />
+      <TextBox Text="{Binding AddressTo}"  Classes="formTextBox" Grid.Column="1" Grid.Row="0"/>
+
+      <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="Amount" VerticalAlignment="Center" Text="Amount:" Classes="formLabel" Grid.Column="0" Grid.Row="1"/>
+      <TextBox Text="{Binding AmountInEther, Converter={StaticResource nullableDecimalConverter}}"  Classes="formTextBox" Grid.Column="1" Grid.Row="1"/>
+
+      <Button localizations:LocalizationAttachedPropertyHolder.Uid="AdvancedOption" Command="{Binding SwitchAdvanced}" Content="Advanced Option" Grid.Row="2" Grid.ColumnSpan="2" Margin="0,8,0,8" HorizontalAlignment="Right" BorderThickness="0" Background="Transparent" Foreground="#3498db"/>
+
+      <TextBlock IsVisible="{Binding ShowAdvanced}" localizations:LocalizationAttachedPropertyHolder.Uid="Gas" VerticalAlignment="Center" Text="Gas:" Classes="formLabel" Grid.Column="0" Grid.Row="3"/>
+      <TextBox IsVisible="{Binding ShowAdvanced}" Text="{Binding Gas, Converter={StaticResource nullableUInt64Converter}}"  Classes="formTextBox" Grid.Column="1" Grid.Row="3"/>
+
+      <TextBlock IsVisible="{Binding ShowAdvanced}" localizations:LocalizationAttachedPropertyHolder.Uid="GasPrice" VerticalAlignment="Center" Text="Gas Price:" Classes="formLabel" Grid.Column="0" Grid.Row="4"/>
+      <TextBox IsVisible="{Binding ShowAdvanced}" Text="{Binding GasPrice, Converter={StaticResource nullableUInt64Converter}}"  Classes="formTextBox" Grid.Column="1" Grid.Row="4"/>
+
+      <TextBlock IsVisible="{Binding ShowAdvanced}" localizations:LocalizationAttachedPropertyHolder.Uid="Nonce" VerticalAlignment="Center" Text="Nonce (Optional):" Classes="formLabel" Grid.Column="0" Grid.Row="5"/>
+      <TextBox IsVisible="{Binding ShowAdvanced}" Text="{Binding Nonce, Converter={StaticResource nullableUInt64Converter}}"  Classes="formTextBox" Grid.Column="1" Grid.Row="5"/>
+
+
+      <TextBlock IsVisible="{Binding ShowAdvanced}" localizations:LocalizationAttachedPropertyHolder.Uid="Data" VerticalAlignment="Center" Text="Data (Optional):" Classes="formLabel" Grid.Column="0" Grid.Row="6"/>
+      <TextBox IsVisible="{Binding ShowAdvanced}" Text="{Binding Data}"  Classes="formTextBox" Grid.Column="1" Grid.Row="6"/>
+
+      <Button localizations:LocalizationAttachedPropertyHolder.Uid="SendTransaction" Content="Send Transaction" Classes="default" Width="300" Command="{Binding ExecuteTransactionCommand}"  Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="2"/>
+    </Grid>
+  </StackPanel>
+</Window>

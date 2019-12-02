@@ -1,0 +1,31 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:SpockWallet.ViewModels;assembly=SpockWallet"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:clr="clr-namespace:System;assembly=mscorlib"
+        xmlns:converters="clr-namespace:SpockWallet.Converters"
+        Height="300"
+        Width="580"
+        MinWidth="580"
+        MinHeight="300"
+        MaxWidth="580"
+        MaxHeight="300"
+        CanResize="False"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="SpockWallet.Views.MainWindow"
+        Icon="resm:SpockWallet.Assets.favicon.ico"
+        Title="Spock Wallet">
+
+  <Window.Background>
+    <ImageBrush Source="resm:SpockWallet.Assets.load-bg.png?assembly=SpockWallet" />
+  </Window.Background>
+
+  <Design.DataContext>
+    <vm:MainWindowViewModel/>
+  </Design.DataContext>
+
+  <TextBlock Margin="0,0,0,30" Foreground="White" Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+
+</Window>

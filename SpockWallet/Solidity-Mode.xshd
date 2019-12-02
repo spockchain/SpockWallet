@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<!-- syntaxdefinition for JavaScript 2.0 by Svante Lidman -->
+<!-- converted to AvalonEdit format by Siegfried Pammer in 2010 -->
+<SyntaxDefinition name="JavaScript" extensions=".js" xmlns="http://icsharpcode.net/sharpdevelop/syntaxdefinition/2008">
+  <Color name="Digits" foreground="DarkBlue" exampleText="3.14" />
+  <Color name="Comment" foreground="Green" exampleText="// comment" />
+  <Color name="String" foreground="Sienna" exampleText="string text = &quot;Hello, World!&quot;;" />
+  <Color name="JavaScriptKeyWords" foreground="DarkMagenta" exampleText="return myVariable;" />
+  <Color name="JavaScriptIntrinsics" foreground="Blue" exampleText="Math.random()" />
+  <Color name="JavaScriptLiterals" foreground="Olive" exampleText="return false;" />
+  <Color name="JavaScriptGlobalFunctions" foreground="Teal" exampleText="escape(myString);" />
+  <RuleSet ignoreCase="false">
+    <Keywords color="JavaScriptKeyWords">
+      <Word>break</Word>
+      <Word>continue</Word>
+      <Word>delete</Word>
+      <Word>else</Word>
+      <Word>for</Word>
+      <Word>function</Word>
+      <Word>if</Word>
+      <Word>new</Word>
+      <Word>return</Word>
+      <Word>this</Word>
+      <Word>while</Word>
+      <Word>abstract</Word>
+      <Word>class</Word>
+      <Word>default</Word>
+      <Word>do</Word>
+      <Word>enum</Word>
+      <Word>goto</Word>
+      <Word>implements</Word>
+      <Word>import</Word>
+      <Word>interface</Word>
+      <Word>private</Word>
+      <Word>public</Word>
+      <Word>short</Word>
+      <Word>super</Word>
+      <Word>switch</Word>
+      <Word>throw</Word>
+      <Word>pragma</Word>
+      <Word>solidity</Word>
+      <Word>contract</Word>
+      <Word>struct</Word>
+      <Word>storage</Word>
+      <Word>view</Word>
+      <Word>returns</Word>
+      <Word>constructor</Word>
+      <Word>cast</Word>
+      <Word>comment</Word>
+      <Word>base</Word>
+      <Word>creation</Word>
+      <Word>deriving</Word>
+      <Word>exception</Word>
+      <Word>call</Word>
+      <Word>external</Word>
+      <Word>fallback</Word>
+      <Word>getter</Word>
+      <Word>pure</Word>
+      <Word>indexed</Word>
+      <Word>installing</Word>
+      <Word>instruction</Word>
+      <Word>parameter</Word>
+      <Word>value</Word>
+      <Word>mapping</Word>
+      <Word>library</Word>
+      <Word>internal</Word>
+      <Word>modifier</Word>
+      <Word>event</Word>
+      <Word>emit</Word>
+      <Word>is</Word>
+      <Word>constant</Word>
+      <Word>payable</Word>
+      <Word>using</Word>
+      <Word>{</Word>
+      <Word>}</Word>
+      <Word>(</Word>
+      <Word>)</Word>
+    </Keywords>
+    <Keywords color="JavaScriptIntrinsics">
+      <Word>array</Word>
+      <Word>block</Word>
+      <Word>account</Word>
+      <Word>bool</Word>
+      <Word>byte</Word>
+      <Word>int</Word>
+      <Word>uint</Word>
+      <Word>uint8</Word>
+      <Word>uint16</Word>
+      <Word>uint32</Word>
+      <Word>uint64</Word>
+      <Word>uint128</Word>
+      <Word>uint256</Word>
+      <Word>address</Word>
+      <Word>integer</Word>
+      <Word>string</Word>
+      <Word>arrays</Word>
+      <Word>bytes</Word>
+    </Keywords>
+    <Keywords color="JavaScriptLiterals">
+      <Word>false</Word>
+      <Word>null</Word>
+      <Word>true</Word>
+      <Word>NaN</Word>
+      <Word>Infinity</Word>
+    </Keywords>
+    <Keywords color="JavaScriptGlobalFunctions">
+      <Word>push</Word>
+      <Word>pop</Word>
+      <Word>length</Word>
+      <Word>literals</Word>
+      <Word>allocating</Word>
+      <Word>assert</Word>
+      <Word>require</Word>
+    </Keywords>
+    <Span color="Comment">
+      <Begin>//</Begin>
+    </Span>
+    <Span color="Comment" multiline="true">
+      <Begin>/\*</Begin>
+      <End>\*/</End>
+    </Span>
+    <!--<Rule color="Regex">/.*/</Rule>-->
+    <Span color="String" multiline="true">
+      <Begin>"</Begin>
+      <End>"</End>
+      <RuleSet>
+        <Span begin="\\" end="." />
+      </RuleSet>
+    </Span>
+    <Rule color="Digits">\b0[xX][0-9a-fA-F]+|(\b\d+(\.[0-9]+)?|\.[0-9]+)([eE][+-]?[0-9]+)?</Rule>
+  </RuleSet>
+</SyntaxDefinition>

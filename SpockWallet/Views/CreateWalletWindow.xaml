@@ -1,0 +1,34 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:SpockWallet.ViewModels.WalletModels;assembly=SpockWallet"
+        mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="550"
+        xmlns:localizations="clr-namespace:SpockWallet.Localizations;assembly=SpockWallet"
+        Width="600"
+        x:Class="SpockWallet.Views.CreateWalletWindow"
+        WindowStartupLocation="CenterScreen"
+        Icon="resm:SpockWallet.Assets.favicon.ico?assembly=SpockWallet"
+        Topmost="True"
+        Title="Create Wallet">
+  <Window.DataContext>
+    <vm:CreateWalletWindowViewModel />
+  </Window.DataContext>
+  <StackPanel>
+    <Border Background="#2B579A" Height="100" VerticalAlignment="Top">
+      <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="CreateYourWallet" FontSize="28" Foreground="White" Text="Create Your Wallet" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+    </Border>
+    <StackPanel Margin="0,12,0,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+      <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="ForMnemonic" FontSize="20" Text="For Mnemonic" Foreground="#143f6f"/>
+
+      <StackPanel Margin="0,12,0,0" Orientation="Horizontal">
+        <TextBox localizations:LocalizationAttachedPropertyHolder.Uid="OptionPassword" Watermark="Password (option)" Text="{Binding MnemonicPassword}" BorderBrush="#44b6ae" Width="320"/>
+        <Button localizations:LocalizationAttachedPropertyHolder.Uid="Create" Command="{Binding CreateMnemonic}" Width="80" Margin="8,0,0,0" Classes="default">Create</Button>
+      </StackPanel>
+
+      <TextBox IsReadOnly="True" BorderThickness="0" Width="408" Margin="0,12,0,0" Text="{Binding AccountMnemonic}" AcceptsReturn="True" TextWrapping="Wrap" Foreground="#2B579A" FontSize="16"/>
+
+      <Button localizations:LocalizationAttachedPropertyHolder.Uid="WrittenMnemonims" Command="{Binding Done}" Width="280" Margin="0,50,0,0" Classes="default">I've written mnemonims</Button>
+    </StackPanel>
+  </StackPanel>
+</Window>

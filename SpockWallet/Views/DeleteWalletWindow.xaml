@@ -1,0 +1,27 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:SpockWallet.ViewModels.WalletModels;assembly=SpockWallet"
+        mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="550"
+        Width="600"
+        Height="550"
+        xmlns:localizations="clr-namespace:SpockWallet.Localizations;assembly=SpockWallet"
+        x:Class="SpockWallet.Views.DeleteWalletWindow"
+        WindowStartupLocation="CenterScreen"
+        Icon="resm:SpockWallet.Assets.favicon.ico?assembly=SpockWallet"
+        Title="Delete Wallet">
+  <Window.DataContext>
+    <vm:DeleteWalletWindowViewModel />
+  </Window.DataContext>
+  <StackPanel>
+    <Border Background="#e7505a" Height="100" VerticalAlignment="Top">
+      <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="DeleteWallet" FontSize="28" Foreground="White" Text="Delete Wallet" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+    </Border>
+    <StackPanel HorizontalAlignment="Center" Margin="12,36,12,12" Orientation="Horizontal">
+      <TextBox localizations:LocalizationAttachedPropertyHolder.Uid="Address" Watermark="Address" Text="{Binding DeleteAddress}" BorderBrush="#44b6ae" Width="280"/>
+      <Button localizations:LocalizationAttachedPropertyHolder.Uid="Delete" Command="{Binding Delete}" Width="80" Margin="8,0,0,0" Background="#f36a5a" Foreground="White" BorderThickness="1" BorderBrush="#e7505a">Delete</Button>
+    </StackPanel>
+    <TextBlock HorizontalAlignment="Center" Foreground="Red" Text="{Binding DeleteStatus}" Margin="12,5,12,12"/>
+  </StackPanel>
+</Window>

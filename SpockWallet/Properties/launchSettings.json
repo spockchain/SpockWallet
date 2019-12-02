@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SpockWallet": {
+      "commandName": "Project",
+      "commandLineArgs": "--nonode"
+    }
+  }
+}

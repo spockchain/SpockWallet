@@ -1,0 +1,24 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        Width="800"
+        Height="500"
+        CanResize="False"
+        WindowStartupLocation="CenterScreen"
+        Icon="resm:SpockWallet.Assets.favicon.ico?assembly=SpockWallet"
+        xmlns:localizations="clr-namespace:SpockWallet.Localizations;assembly=SpockWallet"
+        x:Class="SpockWallet.Views.ErrorWindow"
+        Title="Error">
+  <StackPanel Margin="20">
+    <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="SomethingWentWrong" Text="Oops! Something went wrong." Foreground="Red" FontSize="21"/>
+    <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="ReportErrorMessage" Margin="0,3,0,0" Text="Please report the error message in the text box to us." TextWrapping="Wrap"/>
+    <TextBox BorderBrush="#CCCCCC" Name="errBox" IsReadOnly="True" Height="300" TextWrapping="Wrap" Margin="0,8,0,0" />
+    <Grid Margin="0,12,0,0" ColumnDefinitions="Auto,Auto,*">
+      <Button localizations:LocalizationAttachedPropertyHolder.Uid="CopyErrorMessage" Name="copyMsg" Grid.Column="0" Content="Copy Error Message" BorderBrush="#5fba7d" Background="#45a163" Classes="default" Width="200"/>
+      <Button localizations:LocalizationAttachedPropertyHolder.Uid="SendEmailReportError" Margin="8,0,0,0" Name="sendEmail" Grid.Column="1" Content="Send E-mail" BorderBrush="#5fba7d" Background="#45a163" Classes="default" Width="200"/>
+      <Button localizations:LocalizationAttachedPropertyHolder.Uid="Exit" Name="exit" Grid.Column="2" Content="Exit" Classes="default" HorizontalAlignment="Right" Width="200"/>
+    </Grid>
+  </StackPanel>
+</Window>

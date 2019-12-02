@@ -1,0 +1,36 @@
+﻿<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:SpockWallet"
+             x:Class="SpockWallet.App">
+  <Application.DataTemplates>
+    <local:ViewLocator/>
+  </Application.DataTemplates>
+
+  <Application.Styles>
+    <StyleInclude Source="avares://Avalonia.Themes.Default/DefaultTheme.xaml"/>
+    <StyleInclude Source="avares://Avalonia.Themes.Default/Accents/BaseLight.xaml"/>
+    <StyleInclude Source="resm:AvaloniaEdit.AvaloniaEdit.xaml?assembly=AvaloniaEdit" />
+    
+    <Style Selector="TextBlock.formLabel">
+      <Setter Property="FontSize" Value="{DynamicResource FontSizeNormal}"/>
+      <Setter Property="FontWeight" Value="Bold"/>
+      <Setter Property="Foreground" Value="#337ab7"/>
+      <Setter Property="Margin" Value="5"/>
+    </Style>
+    <Style Selector="TextBox.formTextBox">
+      <Setter Property="Width" Value="300"/>
+      <Setter Property="Margin" Value="5"/>
+      <Setter Property="BorderBrush" Value="#e7ecf1"/>
+      <Setter Property="HorizontalAlignment" Value="Left"/>
+    </Style>
+    <Style Selector="TextBox:focus">
+      <Setter Property="BorderBrush" Value="#578ebe"/>
+    </Style>
+    <Style Selector="Button.default">
+      <Setter Property="Background" Value="#3498db"/>
+      <Setter Property="Foreground" Value="White"/>
+      <Setter Property="BorderThickness" Value="1"/>
+      <Setter Property="BorderBrush" Value="#337ab7"/>
+    </Style>
+  </Application.Styles>
+</Application>

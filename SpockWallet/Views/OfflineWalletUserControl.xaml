@@ -1,0 +1,43 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             xmlns:localizations="clr-namespace:SpockWallet.Localizations;assembly=SpockWallet"
+             x:Class="SpockWallet.Views.OfflineWalletUserControl">
+  <ItemsControl BorderThickness="0" Items="{Binding Path=Wallets}">
+    <ItemsControl.DataTemplates>
+      <DataTemplate>
+        <Border Margin="0,8,0,8"  HorizontalAlignment="Stretch" BorderThickness="0,0,0,1" BorderBrush="#DDDDDD" Padding="10">
+          <Grid ColumnDefinitions="*,Auto">
+            <StackPanel>
+              <StackPanel Orientation="Horizontal">
+                <TextBlock VerticalAlignment="Center" Foreground="#3598dc" Text="{Binding Path=Address}"/>
+                <Button Command="{Binding CopyAddress}" BorderThickness="0" Background="Transparent">
+                  <Image Width="14" Height="14" Source="resm:SpockWallet.Assets.copy.png?assembly=SpockWallet"/>
+                </Button>
+              </StackPanel>
+              <StackPanel Margin="0,5,0,0" Orientation="Horizontal">
+                <TextBlock VerticalAlignment="Center" Foreground="#000000" Text="Plot Id:"/>
+                <TextBlock VerticalAlignment="Center" Foreground="#444444" Text="{Binding Plotid}" Margin="8,0,0,0"/>
+                <Button Command="{Binding CopyPlotid}" BorderThickness="0" Background="Transparent">
+                  <Image Width="14" Height="14" Source="resm:SpockWallet.Assets.copy_black.png?assembly=SpockWallet"/>
+                </Button>
+              </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Column="1">
+              <Button Background="Transparent" BorderThickness="0" Command="{Binding Receive}" Margin="12,0,0,0">
+                <StackPanel>
+                  <Border Padding="10" Width="60" Height="60" Background="#179f9a" CornerRadius="30">
+                    <Image Margin="10" Width="30" Height="30" Source="resm:SpockWallet.Assets.receive.png?assembly=SpockWallet" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                  </Border>
+                  <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="Receivables" Foreground="Gray" FontSize="11" Margin="0,8,0,0" Text="收款" HorizontalAlignment="Center"/>
+                </StackPanel>
+              </Button>
+            </StackPanel>
+          </Grid>
+        </Border>
+      </DataTemplate>
+    </ItemsControl.DataTemplates>
+  </ItemsControl>
+</UserControl>

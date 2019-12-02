@@ -1,0 +1,24 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="450" d:DesignHeight="450"
+        Width="450"
+        x:Class="SpockWallet.Views.ReceiveWindow"
+        WindowStartupLocation="CenterScreen"
+        xmlns:localizations="clr-namespace:SpockWallet.Localizations;assembly=SpockWallet"
+        Icon="resm:SpockWallet.Assets.favicon.ico?assembly=SpockWallet"
+        Title="Receive">
+  <StackPanel>
+    <Border Background="#179f9a" Height="100" VerticalAlignment="Top">
+      <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="ReceiveSpok" FontSize="28" Foreground="White" Text="Receive SPOCK" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+    </Border>
+    <Image Width="200" Height="200" Source="{Binding QrCode}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    <Grid HorizontalAlignment="Center" ColumnDefinitions="Auto,Auto" Margin="16">
+      <TextBlock Text="{Binding Address}" Classes="formTextBox" Grid.Column="0" />
+      <Button Command="{Binding CopyAddress}" BorderThickness="0" Background="Transparent" Grid.Column="1">
+        <Image Width="14" Height="14" Source="resm:SpockWallet.Assets.copy.png?assembly=SpockWallet"/>
+      </Button>
+    </Grid>
+  </StackPanel>
+</Window>

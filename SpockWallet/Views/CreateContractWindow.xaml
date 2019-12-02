@@ -1,0 +1,176 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        xmlns:AvalonEdit="clr-namespace:AvaloniaEdit;assembly=AvaloniaEdit"
+        xmlns:conv="clr-namespace:SpockWallet.Converters;assembly=SpockWallet"
+        x:Class="SpockWallet.Views.CreateContractWindow"
+        Icon="resm:SpockWallet.Assets.favicon.ico?assembly=SpockWallet"
+        WindowStartupLocation="CenterScreen"
+        xmlns:localizations="clr-namespace:SpockWallet.Localizations;assembly=SpockWallet"
+        Title="Create Contract">
+  <Window.Resources>
+    <conv:NullableDecimalConverter x:Key="nullableDecimalConverter"/>
+    <conv:NullableUInt64Converter x:Key="nullableUInt64Converter"/>
+  </Window.Resources>
+  <Window.Styles>
+    <Style Selector="TabControl">
+      <Setter Property="Background" Value="#FFFFFF"/>
+    </Style>
+    <Style Selector="TabControl WrapPanel">
+      <Setter Property="Background" Value="#F6F6F6"/>
+    </Style>
+    <Style Selector="TabItem">
+      <Setter Property="FontSize" Value="12"/>
+      <Setter Property="Height" Value="45"/>
+      <Setter Property="VerticalAlignment" Value="Center"/>
+      <Setter Property="Background" Value="#F6F6F6"/>
+      <Setter Property="Foreground" Value="#3498db"/>
+      <Setter Property="Margin" Value="10 2 10 0"/>
+      <Setter Property="BorderThickness" Value="0,0,0,3"/>
+    </Style>
+    <Style Selector="TabItem:pointerover/template/ContentPresenter#PART_ContentPresenter">
+      <Setter Property="Background" Value="#F6F6F6"/>
+      <Setter Property="BorderBrush" Value="#7dc5eb"/>
+    </Style>
+    <Style Selector="TabItem:focus">
+      <Setter Property="Foreground" Value="#2B579A"/>
+    </Style>
+    <Style Selector="TabItem:focus/template/ContentPresenter#PART_ContentPresenter">
+      <Setter Property="Background" Value="#F6F6F6"/>
+    </Style>
+    <Style Selector="TabItem:selected">
+      <Setter Property="Foreground" Value="#2B579A"/>
+      <Setter Property="BorderBrush" Value="#3498db"/>
+    </Style>
+    <Style Selector="TabItem:selected/template/ContentPresenter#PART_ContentPresenter">
+      <Setter Property="Background" Value="#F6F6F6"/>
+    </Style>
+  </Window.Styles>
+  <DockPanel>
+    <Border Padding="16,0,16,16" BorderThickness="0,0,1,0" BorderBrush="#f7f7f7">
+      <StackPanel Orientation="Vertical"
+                  DockPanel.Dock="Left"
+                  Width="280"
+                  Spacing="5"
+                  Margin="3">
+        <StackPanel>
+          <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="From" Text="From"/>
+          <Grid ColumnDefinitions="*,Auto" Margin="0,5,0,0">
+            <TextBox VerticalAlignment="Center" IsReadOnly="True" Watermark="From" Text="{Binding From}" BorderBrush="#44b6ae"/>
+            <Menu Grid.Column="1" VerticalAlignment="Center" BorderThickness="1" BorderBrush="#C8E1FF" Margin="12,0,0,0" Items="{Binding MenuItems}">
+              <Menu.Styles>
+                <Style Selector="MenuItem">
+                  <Setter Property="Header" Value="{Binding Header}"/>
+                  <Setter Property="Items" Value="{Binding Items}"/>
+                  <Setter Property="Command" Value="{Binding Command}"/>
+                  <Setter Property="CommandParameter" Value="{Binding CommandParameter}"/>
+                </Style>
+              </Menu.Styles>
+            </Menu>
+          </Grid>
+        </StackPanel>
+        <StackPanel Margin="0,8,0,0">
+          <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="Value" Text="Value"/>
+          <TextBox Margin="0,5,0,0" Watermark="Value" Text="{Binding AmountInEther, Converter={StaticResource nullableDecimalConverter}}" BorderBrush="#44b6ae"/>
+        </StackPanel>
+
+        <StackPanel Margin="0,8,0,0">
+          <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="ContractName" Text="Contract Name"/>
+          <TextBox Margin="0,5,0,0" Watermark="Contract Name" BorderBrush="#44b6ae" Text="{Binding ContractName}"/>
+        </StackPanel>
+
+        <TextBlock Margin="0,8,0,0" localizations:LocalizationAttachedPropertyHolder.Uid="Gas" VerticalAlignment="Center" Text="Gas:" />
+        <TextBox Text="{Binding Gas, Converter={StaticResource nullableUInt64Converter}}"  BorderBrush="#44b6ae"/>
+
+        <TextBlock Margin="0,8,0,0" localizations:LocalizationAttachedPropertyHolder.Uid="GasPrice" VerticalAlignment="Center" Text="Gas Price:"/>
+        <TextBox Text="{Binding GasPrice, Converter={StaticResource nullableUInt64Converter}}"  BorderBrush="#44b6ae"/>
+
+        <Border Margin="0,8,0,0" BorderThickness="0,1,0,0" BorderBrush="#CCCCCC" IsVisible="{Binding ShowConstructorParams}">
+          <StackPanel>
+            <TextBlock Margin="0,8,0,0" localizations:LocalizationAttachedPropertyHolder.Uid="ConstructorParams" Text="Constructor Parameters" />
+            <StackPanel Name="constructorParamsBorder"></StackPanel>
+          </StackPanel>
+        </Border>
+
+        <StackPanel Margin="0,8,0,0" Orientation="Horizontal">
+          <TextBlock Foreground="Gray" VerticalAlignment="Center" localizations:LocalizationAttachedPropertyHolder.Uid="CompiledVersion" Text="Compiled Version" />
+          <TextBlock Margin="4,0,0,0" VerticalAlignment="Center" Text="{Binding CurrentCompiledVersion}" />
+          <Menu Margin="4,0,0,0">
+            <MenuItem>
+              <MenuItem.Header>
+                <Image VerticalAlignment="Center" Source="resm:SpockWallet.Assets.select.png?assembly=SpockWallet" Width="16" Height="16"/>
+              </MenuItem.Header>
+              <MenuItem Command="{Binding SelectCompiledVersion}" CommandParameter="v0.4.20" Header="v0.4.20"/>
+              <MenuItem Command="{Binding SelectCompiledVersion}" CommandParameter="v0.4.21" Header="v0.4.21"/>
+              <MenuItem Command="{Binding SelectCompiledVersion}" CommandParameter="v0.4.22" Header="v0.4.22"/>
+              <MenuItem Command="{Binding SelectCompiledVersion}" CommandParameter="v0.4.23" Header="v0.4.23"/>
+              <MenuItem Command="{Binding SelectCompiledVersion}" CommandParameter="v0.4.24" Header="v0.4.24"/>
+              <MenuItem Command="{Binding SelectCompiledVersion}" CommandParameter="v0.4.25" Header="v0.4.25 (Default)"/>
+            </MenuItem>
+          </Menu>
+        </StackPanel>
+        <Button Classes="default" localizations:LocalizationAttachedPropertyHolder.Uid="Compile" Content="Compile" Command="{Binding Compile}"/>
+        <Button Margin="0,5,0,0" Classes="default" localizations:LocalizationAttachedPropertyHolder.Uid="Deploy" Content="Deploy" Command="{Binding ExecuteTransactionCommand}" />
+
+        <Border Margin="0,8,0,0" Background="#d81e06" Padding="8" CornerRadius="8" IsVisible="{Binding HasError}">
+          <StackPanel>
+            <TextBlock Text="{Binding ErrorMsg}" TextWrapping="Wrap" Foreground="White"/>
+            <Button Command="{Binding CopyErrorMsg}" HorizontalAlignment="Right" BorderThickness="0" Background="Transparent">
+              <Image Width="14" Height="14" Source="resm:SpockWallet.Assets.copy_black.png?assembly=SpockWallet"/>
+            </Button>
+          </StackPanel>
+        </Border>
+      </StackPanel>
+    </Border>
+    <TabControl VerticalAlignment="Top">
+      <TabItem VerticalContentAlignment="Center">
+        <TabItem.Header>
+          <StackPanel Orientation="Horizontal">
+            <Image Width="20" Height="16" Source="resm:SpockWallet.Assets.code.png?assembly=SpockWallet"/>
+            <TextBlock Margin="12,0,0,0" VerticalAlignment="Center" Text="Source Code"/>
+          </StackPanel>
+        </TabItem.Header>
+        <AvalonEdit:TextEditor Name="SourceCodeEditor"
+                               Background="White"
+                               Foreground="#444444"
+                               MinHeight="350"
+                               ShowLineNumbers="True"
+                               SyntaxHighlighting="Solidity"
+                               HorizontalScrollBarVisibility="Auto"
+                               VerticalScrollBarVisibility="Visible" />
+      </TabItem>
+      <TabItem VerticalContentAlignment="Center">
+        <TabItem.Header>
+          <StackPanel Orientation="Horizontal">
+            <Image Width="20" Height="16" Source="resm:SpockWallet.Assets.bytecode.png?assembly=SpockWallet"/>
+            <TextBlock Margin="12,0,0,0" VerticalAlignment="Center" Text="Bytecode"/>
+          </StackPanel>
+        </TabItem.Header>
+        <StackPanel Margin="8">
+          <Button Width="120" HorizontalAlignment="Right" Classes="default" localizations:LocalizationAttachedPropertyHolder.Uid="CopyBytecode" Content="Copy Bytecode" Command="{Binding CopyBytecode}" />
+          <TextBlock Margin="0,5,0,0" TextWrapping="Wrap" Text="{Binding Bytecode}" />
+        </StackPanel>
+      </TabItem>
+      <TabItem VerticalContentAlignment="Center">
+        <TabItem.Header>
+          <StackPanel Orientation="Horizontal">
+            <Image Width="20" Height="16" Source="resm:SpockWallet.Assets.abi.png?assembly=SpockWallet"/>
+            <TextBlock Margin="12,0,0,0" VerticalAlignment="Center" Text="ABI"/>
+          </StackPanel>
+        </TabItem.Header>
+        <AvalonEdit:TextEditor Name="AbiEditor"
+                               Background="White"
+                               Foreground="#444444"
+                               ShowLineNumbers="True"
+                               MinHeight="350"
+                               IsReadOnly="True"
+                               WordWrap="True"
+                               SyntaxHighlighting="JavaScript"
+                               HorizontalScrollBarVisibility="Auto"
+                               VerticalScrollBarVisibility="Visible" />
+      </TabItem>
+    </TabControl>
+  </DockPanel>
+</Window>

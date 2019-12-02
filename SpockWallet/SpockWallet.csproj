@@ -1,0 +1,347 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFrameworks>netcoreapp2.1</TargetFrameworks>
+    <AssemblyName>SpockWallet</AssemblyName>
+    <RootNamespace>SpockWallet</RootNamespace>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+    <Version>1.1.0</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="**\*.xaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+    <AvaloniaResource Include="**\*.xaml">
+      <SubType>Designer</SubType>
+    </AvaloniaResource>
+    <AvaloniaResource Include="Assets\*" />
+  </ItemGroup>
+  <ItemGroup>
+    <AvaloniaResource Remove="Assets\abi.png" />
+    <AvaloniaResource Remove="Assets\batch_transfer.png" />
+    <AvaloniaResource Remove="Assets\bytecode.png" />
+    <AvaloniaResource Remove="Assets\code.png" />
+    <AvaloniaResource Remove="Assets\contract.png" />
+    <AvaloniaResource Remove="Assets\copy.png" />
+    <AvaloniaResource Remove="Assets\copy_black.png" />
+    <AvaloniaResource Remove="Assets\create.png" />
+    <AvaloniaResource Remove="Assets\delete.png" />
+    <AvaloniaResource Remove="Assets\deploy.png" />
+    <AvaloniaResource Remove="Assets\download.png" />
+    <AvaloniaResource Remove="Assets\explorer.png" />
+    <AvaloniaResource Remove="Assets\favicon.ico" />
+    <AvaloniaResource Remove="Assets\history.png" />
+    <AvaloniaResource Remove="Assets\Import.png" />
+    <AvaloniaResource Remove="Assets\load-bg.png" />
+    <AvaloniaResource Remove="Assets\pause.png" />
+    <AvaloniaResource Remove="Assets\receive.png" />
+    <AvaloniaResource Remove="Assets\select.png" />
+    <AvaloniaResource Remove="Assets\send.png" />
+    <AvaloniaResource Remove="Assets\setting.png" />
+    <AvaloniaResource Remove="Assets\start.png" />
+    <AvaloniaResource Remove="Assets\sync.png" />
+    <AvaloniaResource Remove="Assets\syncfail.png" />
+    <AvaloniaResource Remove="Assets\upload.png" />
+    <AvaloniaResource Remove="Assets\wallet.png" />
+    <AvaloniaResource Remove="ViewModels\SecurityWindow.xaml" />
+    <AvaloniaResource Remove="Views\BatchTransferUserControl.xaml" />
+    <AvaloniaResource Remove="Views\BatchTransferWindow.xaml" />
+    <AvaloniaResource Remove="Views\ContractUserControl.xaml" />
+    <AvaloniaResource Remove="Views\CreateContractWindow.xaml" />
+    <AvaloniaResource Remove="Views\CreateWalletWindow.xaml" />
+    <AvaloniaResource Remove="Views\DeleteWalletWindow.xaml" />
+    <AvaloniaResource Remove="Views\ErrorWindow.xaml" />
+    <AvaloniaResource Remove="Views\ExitApplicationWindows.xaml" />
+    <AvaloniaResource Remove="Views\ImportWalletWindow.xaml" />
+    <AvaloniaResource Remove="Views\OfflineWalletUserControl.xaml" />
+    <AvaloniaResource Remove="Views\OfflineWalletWindow.xaml" />
+    <AvaloniaResource Remove="Views\ReceiveWindow.xaml" />
+    <AvaloniaResource Remove="Views\SecuritySetWindow.xaml" />
+    <AvaloniaResource Remove="Views\SendTransactionWindows.xaml" />
+    <AvaloniaResource Remove="Views\SettingUserControl.xaml" />
+    <AvaloniaResource Remove="Views\SettingWindow.xaml" />
+    <AvaloniaResource Remove="Views\TransactionUserControl.xaml" />
+    <AvaloniaResource Remove="Views\WalletUserControl.xaml" />
+    <AvaloniaResource Remove="Views\WalletWindow.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Assets\abi.png" />
+    <None Remove="Assets\batch_transfer.png" />
+    <None Remove="Assets\bytecode.png" />
+    <None Remove="Assets\code.png" />
+    <None Remove="Assets\contract.png" />
+    <None Remove="Assets\copy.png" />
+    <None Remove="Assets\copy_black.png" />
+    <None Remove="Assets\create.png" />
+    <None Remove="Assets\delete.png" />
+    <None Remove="Assets\deploy.png" />
+    <None Remove="Assets\download.png" />
+    <None Remove="Assets\explorer.png" />
+    <None Remove="Assets\favicon.ico" />
+    <None Remove="Assets\history.png" />
+    <None Remove="Assets\Import.png" />
+    <None Remove="Assets\load-bg.png" />
+    <None Remove="Assets\pause.png" />
+    <None Remove="Assets\receive.png" />
+    <None Remove="Assets\select.png" />
+    <None Remove="Assets\send.png" />
+    <None Remove="Assets\setting.png" />
+    <None Remove="Assets\start.png" />
+    <None Remove="Assets\sync.png" />
+    <None Remove="Assets\syncfail.png" />
+    <None Remove="Assets\upload.png" />
+    <None Remove="Assets\wallet.png" />
+    <None Remove="ViewModels\SecurityWindow.xaml" />
+    <None Remove="Views\BatchTransferUserControl.xaml" />
+    <None Remove="Views\BatchTransferWindow.xaml" />
+    <None Remove="Views\ContractUserControl.xaml" />
+    <None Remove="Views\CreateContractWindow.xaml" />
+    <None Remove="Views\CreateWalletWindow.xaml" />
+    <None Remove="Views\DeleteWalletWindow.xaml" />
+    <None Remove="Views\ErrorWindow.xaml" />
+    <None Remove="Views\ExitApplicationWindows.xaml" />
+    <None Remove="Views\ImportWalletWindow.xaml" />
+    <None Remove="Views\OfflineWalletUserControl.xaml" />
+    <None Remove="Views\OfflineWalletWindow.xaml" />
+    <None Remove="Views\ReceiveWindow.xaml" />
+    <None Remove="Views\SecuritySetWindow.xaml" />
+    <None Remove="Views\SendTransactionWindows.xaml" />
+    <None Remove="Views\SettingUserControl.xaml" />
+    <None Remove="Views\SettingWindow.xaml" />
+    <None Remove="Views\TransactionUserControl.xaml" />
+    <None Remove="Views\WalletUserControl.xaml" />
+    <None Remove="Views\WalletWindow.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\explorer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\abi.png" />
+    <EmbeddedResource Include="Assets\bytecode.png" />
+    <EmbeddedResource Include="Assets\code.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\deploy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\pause.png" />
+    <EmbeddedResource Include="Assets\start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\download.png" />
+    <EmbeddedResource Include="Assets\upload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\batch_transfer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\contract.png" />
+    <EmbeddedResource Include="Assets\history.png" />
+    <EmbeddedResource Include="Assets\setting.png" />
+    <EmbeddedResource Include="Assets\wallet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\receive.png" />
+    <EmbeddedResource Include="Assets\send.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\create.png" />
+    <EmbeddedResource Include="Assets\delete.png" />
+    <EmbeddedResource Include="Assets\import.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\copy_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\sync.png" />
+    <EmbeddedResource Include="Assets\syncfail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\favicon.ico">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\load-bg.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="0.8.3" />
+    <PackageReference Include="Avalonia.AvaloniaEdit" Version="0.8.0" />
+    <PackageReference Include="Avalonia.Controls.DataGrid" Version="0.8.1" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.8.2" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.8.2" />
+    <PackageReference Include="ConsoleTables" Version="2.3.0" />
+    <PackageReference Include="CsvHelper" Version="12.1.2" />
+    <PackageReference Include="MessageBox.Avalonia" Version="0.8.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.2.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Nethereum.HdWallet" Version="3.4.0" />
+    <PackageReference Include="Nethereum.JsonRpc.WebSocketClient" Version="3.4.0" />
+    <PackageReference Include="Nethereum.Signer" Version="3.4.0" />
+    <PackageReference Include="Nethereum.StandardTokenEIP20" Version="3.4.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="NSubsys" Version="1.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Serilog.Sinks.File" Version="4.0.0" />
+    <PackageReference Include="SolcLib.Native" Version="0.4.25.32" />
+    <PackageReference Include="SolcNet" Version="1.1.107" />
+    <PackageReference Include="SolcNet.Legacy" Version="0.1.17" />
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.111" />
+    <PackageReference Include="ZXing.Net" Version="0.16.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\SettingWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\WalletWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\WalletUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\TransactionUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Localizations\AppResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Views\SettingWindow.xaml.cs">
+      <DependentUpon>SettingWindow.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\SettingUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ImportWalletWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\CreateWalletWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\SendTransactionWindows.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ReceiveWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\OfflineWalletUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\OfflineWalletWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\SecurityWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\SecuritySetWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\DeleteWalletWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ExitApplicationWindows.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ErrorWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ContractUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\BatchTransferWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\BatchTransferUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\CreateContractWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Localizations\AppResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localizations\AppResources.zh-Hans.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="favicon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="simple-example.sol">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Solidity-Mode.xshd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Spock\spock_linux_amd64_v2.1.0">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Spock\spock_win64_v2.1.0.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Views\SecurityWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="wwwroot\remix-3ec8ef0.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,43 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        Width="800"
+        Height="450"
+        MinWidth="450"
+        MinHeight="450"
+        MaxWidth="800"
+        MaxHeight="450"
+        WindowStartupLocation="CenterScreen"
+        xmlns:localizations="clr-namespace:SpockWallet.Localizations;assembly=SpockWallet"
+        x:Class="SpockWallet.Views.SettingWindow"
+        Title="Connect to Spock Network"
+        Icon="resm:SpockWallet.Assets.favicon.ico?assembly=SpockWallet"
+        Background="#F9F9F9">
+  <Grid>
+    <Border Background="#2B579A" Height="100" VerticalAlignment="Top">
+      <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="ConnectToSpock" FontSize="28" Foreground="White" Text="Connect to Spock Network" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+    </Border>
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+      <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="ConnectToNode" FontSize="20" Text="Connect to Node" Foreground="#143f6f"/>
+      <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="ConnectNodeSubtitle" Foreground="Gray" Text="You need Node to open RPC and WebSocket" Margin="0,3,0,0"/>
+
+      <StackPanel Margin="0,20,0,0" Orientation="Horizontal">
+        <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="RPC" Text="RPC" VerticalAlignment="Center" Margin="0,0,8,0"/>
+        <TextBox Watermark="http://localhost:9666" Text="{Binding RpcUrl}" BorderBrush="#44b6ae" Width="220"/>
+        <Button localizations:LocalizationAttachedPropertyHolder.Uid="Test" Command="{Binding TestRpc}" Width="80" Margin="8,0,0,0" Background="#2ab4c0" Foreground="White" BorderThickness="1" BorderBrush="#44b6ae">Test</Button>
+      </StackPanel>
+      <TextBlock Foreground="Gray" Text="{Binding RpcStatus}" Margin="0,5,0,0"/>
+
+      <!--<StackPanel Margin="0,8,0,0" Orientation="Horizontal">
+        <TextBlock Text="WebSocket" VerticalAlignment="Center" Margin="0,0,8,0"/>
+        <TextBox Watermark="ws://localhost:8546" Text="{Binding WsUrl}" BorderBrush="#44b6ae" Width="220"/>
+        <Button Command="{Binding TestWs}" Width="80" Margin="8,0,0,0" Background="#2ab4c0" Foreground="White" BorderThickness="1" BorderBrush="#44b6ae">Test</Button>
+      </StackPanel>-->
+      <!--<TextBlock Foreground="Gray" Text="{Binding WsStatus}" Margin="0,5,0,0"/>-->
+      <Button Margin="0,25,0,0" Classes="default" Command="{Binding SaveSetting}" Content="{Binding DoneBtnText}" />
+      <Button localizations:LocalizationAttachedPropertyHolder.Uid="UseOfflineWallet" Margin="0,25,0,0" Background="Transparent" Foreground="#143f6f" BorderThickness="1" BorderBrush="#21558e" Command="{Binding UseOfflineWallet}" Content="Open Wallet Use Offline Mode" />
+    </StackPanel>
+  </Grid>
+</Window>

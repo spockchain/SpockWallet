@@ -1,0 +1,42 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:SpockWallet.ViewModels.WalletModels;assembly=SpockWallet"
+        mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="450"
+        Width="600"
+        x:Class="SpockWallet.Views.ImportWalletWindow"
+        WindowStartupLocation="CenterScreen"
+        xmlns:localizations="clr-namespace:SpockWallet.Localizations;assembly=SpockWallet"
+        Icon="resm:SpockWallet.Assets.favicon.ico?assembly=SpockWallet"
+        Title="Import Wallet">
+  <Window.DataContext>
+    <vm:ImportWalletWindowViewModel />
+  </Window.DataContext>
+  <StackPanel>
+    <Border Background="#2B579A" Height="100">
+      <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="ImportYourWallet" FontSize="28" Foreground="White" Text="Import Your Wallet" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+    </Border>
+    <StackPanel Margin="0,12,0,0" HorizontalAlignment="Center">
+      <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="EnterYourMnemonic" FontSize="20" Text="Enter Your Mnemonic" Foreground="#143f6f"/>
+
+      <StackPanel Margin="0,12,0,0" Orientation="Horizontal">
+        <TextBox localizations:LocalizationAttachedPropertyHolder.Uid="OptionPassword" Watermark="Password (option)" Text="{Binding MnemonicPassword}" BorderBrush="#44b6ae" Width="220"/>
+      </StackPanel>
+
+      <StackPanel Margin="0,12,0,0" Orientation="Horizontal">
+        <TextBox localizations:LocalizationAttachedPropertyHolder.Uid="Mnemonic" Watermark="Mnemonic" Text="{Binding AccountMnemonic}" BorderBrush="#44b6ae" Width="320"/>
+        <Button localizations:LocalizationAttachedPropertyHolder.Uid="Load" Command="{Binding LoadMnemonic}" Width="80" Margin="8,0,0,0" Classes="default" Content="Load" />
+      </StackPanel>
+
+      <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="Or" Margin="0,20,0,20" HorizontalAlignment="Center" Foreground="#CCCCCC" Text="———————————— or ————————————"/>
+
+      <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="EnterYourPrivateKey" FontSize="20" Text="Enter Your Private Key" Foreground="#143f6f"/>
+
+      <StackPanel Margin="0,12,0,0" Orientation="Horizontal">
+        <TextBox localizations:LocalizationAttachedPropertyHolder.Uid="PrivateKey" Watermark="Private Key" Text="{Binding PrivateKey}" BorderBrush="#44b6ae" Width="320"/>
+        <Button localizations:LocalizationAttachedPropertyHolder.Uid="Load" Command="{Binding LoadPrivateKey}" Width="80" Margin="8,0,0,0" Classes="default">Load</Button>
+      </StackPanel>
+    </StackPanel>
+  </StackPanel>
+</Window>

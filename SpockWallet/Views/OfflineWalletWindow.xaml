@@ -1,0 +1,81 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        Width="800"
+        xmlns:controls="clr-namespace:SpockWallet.Views;assembly=SpockWallet"
+        xmlns:vm="clr-namespace:SpockWallet.ViewModels.OfflineModels;assembly=SpockWallet"
+        x:Class="SpockWallet.Views.OfflineWalletWindow"
+        xmlns:localizations="clr-namespace:SpockWallet.Localizations;assembly=SpockWallet"
+        Icon="resm:SpockWallet.Assets.favicon.ico?assembly=SpockWallet"
+        WindowStartupLocation="CenterScreen"
+        Title="Offline Wallet">
+  <Window.Styles>
+    <Style Selector="TabControl">
+      <Setter Property="Background" Value="#FFFFFF"/>
+    </Style>
+    <Style Selector="TabControl WrapPanel">
+      <Setter Property="Background" Value="#2B579A"/>
+    </Style>
+    <Style Selector="TabItem">
+      <Setter Property="FontSize" Value="12"/>
+      <Setter Property="Height" Value="60"/>
+      <Setter Property="VerticalAlignment" Value="Center"/>
+      <Setter Property="Background" Value="#2B579A"/>
+      <Setter Property="Foreground" Value="#F0F0F0"/>
+      <Setter Property="Margin" Value="0 0 0 0"/>
+      <Setter Property="Padding" Value="80 0"/>
+    </Style>
+    <Style Selector="TabItem:pointerover/template/ContentPresenter#PART_ContentPresenter">
+      <Setter Property="Background" Value="#124078"/>
+    </Style>
+    <Style Selector="TabItem:focus">
+      <Setter Property="Foreground" Value="#2B579A"/>
+      <Setter Property="Margin" Value="0 0 0 0"/>
+      <Setter Property="Padding" Value="80 0"/>
+    </Style>
+    <Style Selector="TabItem:focus/template/ContentPresenter#PART_ContentPresenter">
+      <Setter Property="Background" Value="#FFFFFF"/>
+    </Style>
+    <Style Selector="TabItem:selected">
+      <Setter Property="Foreground" Value="#2B579A"/>
+      <Setter Property="Margin" Value="0 0 0 0"/>
+      <Setter Property="Padding" Value="80 0"/>
+      <Setter Property="BorderThickness" Value="0,3,0,0"/>
+      <Setter Property="BorderBrush" Value="#179f9a"/>
+    </Style>
+    <Style Selector="TabItem:selected/template/ContentPresenter#PART_ContentPresenter">
+      <Setter Property="Background" Value="#FFFFFF"/>
+    </Style>
+  </Window.Styles>
+  <Window.DataContext>
+    <vm:OfflineWalletWindowViewModel />
+  </Window.DataContext>
+  <TabControl VerticalAlignment="Top">
+    <TabItem VerticalContentAlignment="Center">
+      <TabItem.Header>
+        <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="Wallets" Text="WALLETS"/>
+      </TabItem.Header>
+      <StackPanel Margin="20">
+        <Border Padding="10" Background="#f6f6f6">
+          <StackPanel Orientation="Horizontal">
+            <Button Padding="6" Grid.Column="0" Foreground="#337ab7" BorderBrush="#337ab7" HorizontalAlignment="Right" Background="Transparent" Command="{Binding CreateWallet}">
+              <StackPanel Orientation="Horizontal">
+                <Image VerticalAlignment="Center" Source="resm:SpockWallet.Assets.create.png?assembly=SpockWallet" Width="16" Height="16"/>
+                <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="CreateWallet" Margin="6,0,0,0" VerticalAlignment="Center" Text="Create Wallet"/>
+              </StackPanel>
+            </Button>
+            <Button Padding="6" Grid.Column="1" Margin="12,0,0,0" Foreground="#337ab7" BorderBrush="#337ab7" Background="Transparent" Command="{Binding ImportWallet}">
+              <StackPanel Orientation="Horizontal">
+                <Image VerticalAlignment="Center" Source="resm:SpockWallet.Assets.import.png?assembly=SpockWallet" Width="16" Height="16"/>
+                <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="ImportWallet" Margin="6,0,0,0" VerticalAlignment="Center" Text="Import Wallet"/>
+              </StackPanel>
+            </Button>
+          </StackPanel>
+        </Border>
+        <controls:OfflineWalletUserControl Margin="0,12,0,0" DataContext="{Binding WalletsUserControlViewModel}"/>
+      </StackPanel>
+    </TabItem>
+  </TabControl>
+</Window>

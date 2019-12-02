@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Address" xml:space="preserve">
+    <value>地址</value>
+  </data>
+  <data name="AddressUnavailable" xml:space="preserve">
+    <value>地址不可用</value>
+  </data>
+  <data name="AddressUnavailableMessage" xml:space="preserve">
+    <value>你确定你输入的RPC地址可用并通过了测试？</value>
+  </data>
+  <data name="AdvancedOption" xml:space="preserve">
+    <value>高级选项</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>金额</value>
+  </data>
+  <data name="Balance" xml:space="preserve">
+    <value>余额:</value>
+  </data>
+  <data name="BatchTransfer" xml:space="preserve">
+    <value>批量转账</value>
+  </data>
+  <data name="Block" xml:space="preserve">
+    <value>区块</value>
+  </data>
+  <data name="BlockHeight" xml:space="preserve">
+    <value>当前区块高度</value>
+  </data>
+  <data name="Compile" xml:space="preserve">
+    <value>编译</value>
+  </data>
+  <data name="CompiledVersion" xml:space="preserve">
+    <value>编译版本</value>
+  </data>
+  <data name="CompileFailed" xml:space="preserve">
+    <value>编译失败</value>
+  </data>
+  <data name="CompileFailedMessage" xml:space="preserve">
+    <value>源代码或合约名不能为空</value>
+  </data>
+  <data name="ConnectedWelcome" xml:space="preserve">
+    <value>已连接，欢迎使用</value>
+  </data>
+  <data name="ConnectNodeSubtitle" xml:space="preserve">
+    <value>你需要打开节点的RPC</value>
+  </data>
+  <data name="ConnectToNode" xml:space="preserve">
+    <value>连接到节点</value>
+  </data>
+  <data name="ConnectToSpock" xml:space="preserve">
+    <value>连接到Spock网络</value>
+  </data>
+  <data name="ConstructorParams" xml:space="preserve">
+    <value>构造函数传参</value>
+  </data>
+  <data name="Contract" xml:space="preserve">
+    <value>智能合约</value>
+  </data>
+  <data name="ContractName" xml:space="preserve">
+    <value>合约名称</value>
+  </data>
+  <data name="ContractNameNotFound" xml:space="preserve">
+    <value>合约名称没有找到</value>
+  </data>
+  <data name="ContractNameNotFoundMessage" xml:space="preserve">
+    <value>请检查合约名称是否在代码中</value>
+  </data>
+  <data name="ContractSelect" xml:space="preserve">
+    <value>选择合约</value>
+  </data>
+  <data name="Copied" xml:space="preserve">
+    <value>已复制</value>
+  </data>
+  <data name="CopyBytecode" xml:space="preserve">
+    <value>复制 Bytecode</value>
+  </data>
+  <data name="CopyErrorMessage" xml:space="preserve">
+    <value>复制错误信息</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>创建</value>
+  </data>
+  <data name="CreateWallet" xml:space="preserve">
+    <value>创建钱包</value>
+  </data>
+  <data name="CreateYourWallet" xml:space="preserve">
+    <value>创建你的钱包</value>
+  </data>
+  <data name="Data" xml:space="preserve">
+    <value>Data (可选)</value>
+  </data>
+  <data name="Decimals" xml:space="preserve">
+    <value>Decimals</value>
+  </data>
+  <data name="Default" xml:space="preserve">
+    <value>默认</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="DeleteWallet" xml:space="preserve">
+    <value>删除钱包</value>
+  </data>
+  <data name="DeleteWalletMessage" xml:space="preserve">
+    <value>这个地址还有 {0} SPOK, 你确认要删除它吗?</value>
+  </data>
+  <data name="Deploy" xml:space="preserve">
+    <value>部署</value>
+  </data>
+  <data name="DeployConteact" xml:space="preserve">
+    <value>部署合约</value>
+  </data>
+  <data name="DeployLimitTip" xml:space="preserve">
+    <value>部署智能合约至少需要10万SPOK</value>
+  </data>
+  <data name="DeployTokenWarning" xml:space="preserve">
+    <value>部署合约需要消耗10万SPOK，确定吗？</value>
+  </data>
+  <data name="DownloadCSVTemplate" xml:space="preserve">
+    <value>下载csv模板</value>
+  </data>
+  <data name="Enter" xml:space="preserve">
+    <value>确认</value>
+  </data>
+  <data name="EnterYourMnemonic" xml:space="preserve">
+    <value>通过助记词导入</value>
+  </data>
+  <data name="EnterYourPrivateKey" xml:space="preserve">
+    <value>通过私钥导入</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>退出</value>
+  </data>
+  <data name="FilterAll" xml:space="preserve">
+    <value>-- 全部 --</value>
+  </data>
+  <data name="FilterByAddress" xml:space="preserve">
+    <value>根据地址过滤:</value>
+  </data>
+  <data name="ForMnemonic" xml:space="preserve">
+    <value>助记词</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>付款方</value>
+  </data>
+  <data name="Gas" xml:space="preserve">
+    <value>Gas (手续费)</value>
+  </data>
+  <data name="GasPrice" xml:space="preserve">
+    <value>Gas Price (手续费价格)</value>
+  </data>
+  <data name="Hash" xml:space="preserve">
+    <value>交易Hash</value>
+  </data>
+  <data name="Hsitory" xml:space="preserve">
+    <value>交易历史</value>
+  </data>
+  <data name="ImportWallet" xml:space="preserve">
+    <value>导入钱包</value>
+  </data>
+  <data name="ImportYourWallet" xml:space="preserve">
+    <value>导入你的钱包</value>
+  </data>
+  <data name="InitDbDone" xml:space="preserve">
+    <value>初始化数据完成</value>
+  </data>
+  <data name="InputPasswordAgain" xml:space="preserve">
+    <value>再次输入密码</value>
+  </data>
+  <data name="InputPasswordIncorrect" xml:space="preserve">
+    <value>密码不正确，请检查后再试</value>
+  </data>
+  <data name="InvalidInputMnemonic" xml:space="preserve">
+    <value>助记词不正确，它应该由至少12个单词且用空格分隔。</value>
+  </data>
+  <data name="Load" xml:space="preserve">
+    <value>加载</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>加载中</value>
+  </data>
+  <data name="Mnemonic" xml:space="preserve">
+    <value>助记词</value>
+  </data>
+  <data name="MnemonicInvalid" xml:space="preserve">
+    <value>助记词错误</value>
+  </data>
+  <data name="NetworkWarning" xml:space="preserve">
+    <value>网络不安全</value>
+  </data>
+  <data name="NetworkWarningMessage" xml:space="preserve">
+    <value>你连接到的是一个公共的节点，连接到公共节点将导致网络中心化，伪造交易甚至改变你的资产会变得轻而易举。我们建议你下载启动并连接本地节点。</value>
+  </data>
+  <data name="NoContractAvailable" xml:space="preserve">
+    <value>没有合约</value>
+  </data>
+  <data name="NodeUrl" xml:space="preserve">
+    <value>节点URL</value>
+  </data>
+  <data name="Nonce" xml:space="preserve">
+    <value>Nonce (可选)</value>
+  </data>
+  <data name="NoWalletAvailable" xml:space="preserve">
+    <value>无可用钱包</value>
+  </data>
+  <data name="OpenBrowser" xml:space="preserve">
+    <value>查看</value>
+  </data>
+  <data name="OptionPassword" xml:space="preserve">
+    <value>密码（可选）</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>———————————— 或 ————————————</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>密码</value>
+  </data>
+  <data name="PasswordNotStrong" xml:space="preserve">
+    <value>密码必须至少8个由数字、字母大小写组成的字符</value>
+  </data>
+  <data name="PasswordsDiffer" xml:space="preserve">
+    <value>两次输入的密码不一致</value>
+  </data>
+  <data name="Pause" xml:space="preserve">
+    <value>暂停</value>
+  </data>
+  <data name="PleaseEnterRpcUrlAddresses" xml:space="preserve">
+    <value>请输入一个合法的URL地址</value>
+  </data>
+  <data name="PleaseEnterURL" xml:space="preserve">
+    <value>请输入URL地址</value>
+  </data>
+  <data name="PleaseInputYourPassword" xml:space="preserve">
+    <value>请输入密码</value>
+  </data>
+  <data name="PleaseSetYourPassword" xml:space="preserve">
+    <value>请设置密码</value>
+  </data>
+  <data name="PrivateKey" xml:space="preserve">
+    <value>私钥</value>
+  </data>
+  <data name="PrivateKeyError" xml:space="preserve">
+    <value>私钥不正确</value>
+  </data>
+  <data name="Receivables" xml:space="preserve">
+    <value>收款</value>
+  </data>
+  <data name="ReceiveSpok" xml:space="preserve">
+    <value>接收SPOK</value>
+  </data>
+  <data name="ReportErrorMessage" xml:space="preserve">
+    <value>请将文本框里面的错误信息报告给我们</value>
+  </data>
+  <data name="RPC" xml:space="preserve">
+    <value>RPC地址</value>
+  </data>
+  <data name="RpcStatusInvalidUrl" xml:space="preserve">
+    <value>警告：RPC地址不是一个合法的URL地址</value>
+  </data>
+  <data name="RpcStatusTestFailed" xml:space="preserve">
+    <value>状态：测试失败</value>
+  </data>
+  <data name="RpcStatusTesting" xml:space="preserve">
+    <value>状态：测试中...</value>
+  </data>
+  <data name="RpcStatusTestSuccess" xml:space="preserve">
+    <value>状态：测试成功</value>
+  </data>
+  <data name="RpcStatusWaitingTest" xml:space="preserve">
+    <value>状态：等待测试...</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="SaveSuccessful" xml:space="preserve">
+    <value>保存成功</value>
+  </data>
+  <data name="SaveSuccessfulMessage" xml:space="preserve">
+    <value>刚刚更改的配置将在下次启动后生效，你最好重启钱包</value>
+  </data>
+  <data name="Security" xml:space="preserve">
+    <value>验证</value>
+  </data>
+  <data name="SelectAssets" xml:space="preserve">
+    <value>选择资产</value>
+  </data>
+  <data name="SelectToken" xml:space="preserve">
+    <value>选择代币</value>
+  </data>
+  <data name="Sended" xml:space="preserve">
+    <value>已发送</value>
+  </data>
+  <data name="SendEmailReportError" xml:space="preserve">
+    <value>发送邮件报告错误</value>
+  </data>
+  <data name="SendFailed" xml:space="preserve">
+    <value>发送失败</value>
+  </data>
+  <data name="SendTransaction" xml:space="preserve">
+    <value>转账</value>
+  </data>
+  <data name="SetPassword" xml:space="preserve">
+    <value>设置密码</value>
+  </data>
+  <data name="Setting" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="SomethingWentWrong" xml:space="preserve">
+    <value>遇到了意料之外的错误</value>
+  </data>
+  <data name="StakingRequired" xml:space="preserve">
+    <value>所需抵押:</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>开始</value>
+  </data>
+  <data name="StartInitDb" xml:space="preserve">
+    <value>正在初始化数据</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="SyncFailed" xml:space="preserve">
+    <value>同步失败</value>
+  </data>
+  <data name="Syncing" xml:space="preserve">
+    <value>同步中...</value>
+  </data>
+  <data name="SyncTip" xml:space="preserve">
+    <value>正在同步丢失的区块，余额和交易可能不准确</value>
+  </data>
+  <data name="Test" xml:space="preserve">
+    <value>测试</value>
+  </data>
+  <data name="TestingAndSaving" xml:space="preserve">
+    <value>测试并保存中...</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>收款方</value>
+  </data>
+  <data name="ToAddress" xml:space="preserve">
+    <value>收款地址</value>
+  </data>
+  <data name="TokenSymbol" xml:space="preserve">
+    <value>代币符号</value>
+  </data>
+  <data name="TotalAmount" xml:space="preserve">
+    <value>总金额</value>
+  </data>
+  <data name="TotalBalance" xml:space="preserve">
+    <value>总余额</value>
+  </data>
+  <data name="TotalCount" xml:space="preserve">
+    <value>总数</value>
+  </data>
+  <data name="TotalSupply" xml:space="preserve">
+    <value>总发行量</value>
+  </data>
+  <data name="Transfer" xml:space="preserve">
+    <value>转账</value>
+  </data>
+  <data name="TxStatusCompleted" xml:space="preserve">
+    <value>已完成</value>
+  </data>
+  <data name="TxStatusFailed" xml:space="preserve">
+    <value>失败</value>
+  </data>
+  <data name="TxStatusPending" xml:space="preserve">
+    <value>确认中</value>
+  </data>
+  <data name="UploadCSV" xml:space="preserve">
+    <value>上传csv文件</value>
+  </data>
+  <data name="UseOfflineWallet" xml:space="preserve">
+    <value>以离线模式打开钱包</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>金额</value>
+  </data>
+  <data name="ViewInExplorer" xml:space="preserve">
+    <value>浏览器查看</value>
+  </data>
+  <data name="WaitClose" xml:space="preserve">
+    <value>此窗口将在1分钟内自动退出，请不要手动关闭此窗口</value>
+  </data>
+  <data name="WalletHasDeleted" xml:space="preserve">
+    <value>已被删除</value>
+  </data>
+  <data name="WalletNotFound" xml:space="preserve">
+    <value>地址未找到</value>
+  </data>
+  <data name="Wallets" xml:space="preserve">
+    <value>我的钱包</value>
+  </data>
+  <data name="WalletSelect" xml:space="preserve">
+    <value>选择钱包</value>
+  </data>
+  <data name="WalletVersion" xml:space="preserve">
+    <value>钱包版本</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>警告</value>
+  </data>
+  <data name="WrittenMnemonims" xml:space="preserve">
+    <value>我已保存好助记词</value>
+  </data>
+</root>

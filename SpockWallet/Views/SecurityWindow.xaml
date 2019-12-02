@@ -1,0 +1,26 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="450" d:DesignHeight="250"
+        Width="450"
+        Height="250"
+        MaxWidth="450"
+        MaxHeight="250"
+        MinWidth="450"
+        MinHeight="250"
+        CanResize="False"
+        x:Class="SpockWallet.Views.SecurityWindow"
+        Icon="resm:SpockWallet.Assets.favicon.ico"
+        WindowStartupLocation="CenterScreen"
+        xmlns:localizations="clr-namespace:SpockWallet.Localizations;assembly=SpockWallet"
+        Title="Security"
+        Background="#143f6f">
+  <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+    <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="Password" Text="Password" Foreground="White" FontSize="14"/>
+    <TextBox Name="passwordKey" Text="{Binding Password}" PasswordChar="#" Width="250" Margin="0,8,0,0" BorderBrush="#143f6f"/>
+    <TextBlock Margin="0,4,0,0" Text="{Binding ErrorMsg}" Foreground="#ffd600"/>
+
+    <Button localizations:LocalizationAttachedPropertyHolder.Uid="Enter" Content="Enter" Margin="0,12,0,0" HorizontalAlignment="Right" Width="80" Background="White" Command="{Binding Enter}" BorderBrush="White" />
+  </StackPanel>
+</Window>

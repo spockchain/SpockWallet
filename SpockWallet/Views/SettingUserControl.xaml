@@ -1,0 +1,28 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             xmlns:localizations="clr-namespace:SpockWallet.Localizations;assembly=SpockWallet"
+             x:Class="SpockWallet.Views.SettingUserControl">
+  <StackPanel Margin="12" HorizontalAlignment="Center">
+    <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="NodeUrl" FontSize="20" Text="Node Url" Foreground="#143f6f"/>
+    <StackPanel Margin="0,12,0,0" Orientation="Horizontal">
+      <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="RPC" Text="RPC" VerticalAlignment="Center" Margin="0,0,8,0"/>
+      <TextBox Watermark="http://localhost:9666" Text="{Binding RpcUrl}" BorderBrush="#44b6ae" Width="220"/>
+      <Button localizations:LocalizationAttachedPropertyHolder.Uid="Test" Command="{Binding TestRpc}" Width="80" Margin="8,0,0,0" Background="#2ab4c0" Foreground="White" BorderThickness="1" BorderBrush="#44b6ae">Test</Button>
+    </StackPanel>
+    <TextBlock Foreground="Gray" Text="{Binding RpcStatus}" Margin="0,5,0,0"/>
+    <Button Classes="default" Margin="0,25,0,0" Command="{Binding SaveSetting}" Content="{Binding DoneBtnText}" />
+
+    <Border Margin="0,25,0,0" Padding="0,0,0,25" BorderThickness="0 1" BorderBrush="#dfe2e5">
+      <Grid ColumnDefinitions="*,Auto" Margin="0,20,0,0">
+        <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="DeleteWallet" FontSize="20" Text="Delete Wallet" Foreground="#143f6f"/>
+        <Button Grid.Column="1" localizations:LocalizationAttachedPropertyHolder.Uid="DeleteWallet" BorderBrush="#e16531" Background="#e7505a" Classes="default" Command="{Binding DeleteWallet}" Content="Delete Wallet" />
+      </Grid>
+    </Border>
+    
+    <TextBlock localizations:LocalizationAttachedPropertyHolder.Uid="WalletVersion" Margin="0,20,0,0" FontSize="20" Text="Wallet Version" Foreground="#143f6f"/>
+    <TextBlock Text="{Binding Version}" VerticalAlignment="Center" Margin="0,8,0,0"/>
+  </StackPanel>
+</UserControl>

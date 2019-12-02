@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="AddressUnavailable" xml:space="preserve">
+    <value>Address unavailable</value>
+  </data>
+  <data name="AddressUnavailableMessage" xml:space="preserve">
+    <value>Are you sure that the address you filled in passed the test</value>
+  </data>
+  <data name="AdvancedOption" xml:space="preserve">
+    <value>Advanced Option</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="Balance" xml:space="preserve">
+    <value>Balance</value>
+  </data>
+  <data name="BatchTransfer" xml:space="preserve">
+    <value>Batch Transfer</value>
+  </data>
+  <data name="Block" xml:space="preserve">
+    <value>Block</value>
+  </data>
+  <data name="BlockHeight" xml:space="preserve">
+    <value>Block Height</value>
+  </data>
+  <data name="Compile" xml:space="preserve">
+    <value>Compile</value>
+  </data>
+  <data name="CompiledVersion" xml:space="preserve">
+    <value>Compiled Version</value>
+  </data>
+  <data name="CompileFailed" xml:space="preserve">
+    <value>Compile Failed</value>
+  </data>
+  <data name="CompileFailedMessage" xml:space="preserve">
+    <value>Source code or contract name cannot be empty</value>
+  </data>
+  <data name="ConnectedWelcome" xml:space="preserve">
+    <value>Connected, welcome...</value>
+  </data>
+  <data name="ConnectNodeSubtitle" xml:space="preserve">
+    <value>You need Node to open RPC</value>
+  </data>
+  <data name="ConnectToNode" xml:space="preserve">
+    <value>Connect To Node</value>
+  </data>
+  <data name="ConnectToSpock" xml:space="preserve">
+    <value>Connect to Spock Network</value>
+  </data>
+  <data name="ConstructorParams" xml:space="preserve">
+    <value>Constructor Parameters</value>
+  </data>
+  <data name="Contract" xml:space="preserve">
+    <value>Contract</value>
+  </data>
+  <data name="ContractName" xml:space="preserve">
+    <value>Contract Name</value>
+  </data>
+  <data name="ContractNameNotFound" xml:space="preserve">
+    <value>Contract Name Not Found</value>
+  </data>
+  <data name="ContractNameNotFoundMessage" xml:space="preserve">
+    <value>Check if the contract name is in the code</value>
+  </data>
+  <data name="ContractSelect" xml:space="preserve">
+    <value>Select Contract</value>
+  </data>
+  <data name="Copied" xml:space="preserve">
+    <value>Copied!</value>
+  </data>
+  <data name="CopyBytecode" xml:space="preserve">
+    <value>Copy Bytecode</value>
+  </data>
+  <data name="CopyErrorMessage" xml:space="preserve">
+    <value>Copy Error Message</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="CreateWallet" xml:space="preserve">
+    <value>Create Wallet</value>
+  </data>
+  <data name="CreateYourWallet" xml:space="preserve">
+    <value>Create Your Wallet</value>
+  </data>
+  <data name="Data" xml:space="preserve">
+    <value>Data (Optional)</value>
+  </data>
+  <data name="Decimals" xml:space="preserve">
+    <value>Decimals</value>
+  </data>
+  <data name="Default" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DeleteWallet" xml:space="preserve">
+    <value>Delete Wallet</value>
+  </data>
+  <data name="DeleteWalletMessage" xml:space="preserve">
+    <value>This address still has {0} SPOK, are you sure you want to delete this address?</value>
+  </data>
+  <data name="Deploy" xml:space="preserve">
+    <value>Deploy</value>
+  </data>
+  <data name="DeployConteact" xml:space="preserve">
+    <value>Deploy Conteact</value>
+  </data>
+  <data name="DeployLimitTip" xml:space="preserve">
+    <value>Deployment of smart contract requires at least 1000000 SPOK</value>
+  </data>
+  <data name="DeployTokenWarning" xml:space="preserve">
+    <value>Deployment contract needs to consume 100000 SPOK, are you sure?</value>
+  </data>
+  <data name="DownloadCSVTemplate" xml:space="preserve">
+    <value>Download CSV Template</value>
+  </data>
+  <data name="Enter" xml:space="preserve">
+    <value>Enter</value>
+  </data>
+  <data name="EnterYourMnemonic" xml:space="preserve">
+    <value>Enter Your Mnemonic</value>
+  </data>
+  <data name="EnterYourPrivateKey" xml:space="preserve">
+    <value>Enter Your Private Key</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="FilterAll" xml:space="preserve">
+    <value>-- All --</value>
+  </data>
+  <data name="FilterByAddress" xml:space="preserve">
+    <value>Filter Address:</value>
+  </data>
+  <data name="ForMnemonic" xml:space="preserve">
+    <value>For Mnemonic</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Gas" xml:space="preserve">
+    <value>Gas</value>
+  </data>
+  <data name="GasPrice" xml:space="preserve">
+    <value>Gas Price</value>
+  </data>
+  <data name="Hash" xml:space="preserve">
+    <value>Hash</value>
+  </data>
+  <data name="Hsitory" xml:space="preserve">
+    <value>HSITORY</value>
+  </data>
+  <data name="ImportWallet" xml:space="preserve">
+    <value>Import Wallet</value>
+  </data>
+  <data name="ImportYourWallet" xml:space="preserve">
+    <value>Import Your Wallet</value>
+  </data>
+  <data name="InitDbDone" xml:space="preserve">
+    <value>Initialization database done...</value>
+  </data>
+  <data name="InputPasswordAgain" xml:space="preserve">
+    <value>Input Password Again</value>
+  </data>
+  <data name="InputPasswordIncorrect" xml:space="preserve">
+    <value>Input password incorrect.</value>
+  </data>
+  <data name="InvalidInputMnemonic" xml:space="preserve">
+    <value>Invalid input mnemonic</value>
+  </data>
+  <data name="Load" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="Mnemonic" xml:space="preserve">
+    <value>Mnemonic</value>
+  </data>
+  <data name="MnemonicInvalid" xml:space="preserve">
+    <value>Mnemonic Invalid</value>
+  </data>
+  <data name="NetworkWarning" xml:space="preserve">
+    <value>Network Insecurity</value>
+  </data>
+  <data name="NetworkWarningMessage" xml:space="preserve">
+    <value>You are connected to a public node, which will result in network centralization, forgery of transactions and even change of your assets. We recommend that you download the boot and connect to the local node.</value>
+  </data>
+  <data name="NoContractAvailable" xml:space="preserve">
+    <value>No Contract Available</value>
+  </data>
+  <data name="NodeUrl" xml:space="preserve">
+    <value>NodeUrl</value>
+  </data>
+  <data name="Nonce" xml:space="preserve">
+    <value>Nonce (Optional)</value>
+  </data>
+  <data name="NoWalletAvailable" xml:space="preserve">
+    <value>No Wallet Available</value>
+  </data>
+  <data name="OpenBrowser" xml:space="preserve">
+    <value>Open Browser</value>
+  </data>
+  <data name="OptionPassword" xml:space="preserve">
+    <value>Password (option)</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>———————————— or ————————————</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="PasswordNotStrong" xml:space="preserve">
+    <value>Please enter a password of at least 8 characters.</value>
+  </data>
+  <data name="PasswordsDiffer" xml:space="preserve">
+    <value>Entered passwords differ!</value>
+  </data>
+  <data name="Pause" xml:space="preserve">
+    <value>Pause</value>
+  </data>
+  <data name="PleaseEnterRpcUrlAddresses" xml:space="preserve">
+    <value>Please enter RPC URL addresses</value>
+  </data>
+  <data name="PleaseEnterURL" xml:space="preserve">
+    <value>Please enter your URL address</value>
+  </data>
+  <data name="PleaseInputYourPassword" xml:space="preserve">
+    <value>Please input your password.</value>
+  </data>
+  <data name="PleaseSetYourPassword" xml:space="preserve">
+    <value>Please set your password</value>
+  </data>
+  <data name="PrivateKey" xml:space="preserve">
+    <value>Private Key</value>
+  </data>
+  <data name="PrivateKeyError" xml:space="preserve">
+    <value>Private Key unavailable</value>
+  </data>
+  <data name="Receivables" xml:space="preserve">
+    <value>Receive</value>
+  </data>
+  <data name="ReceiveSpok" xml:space="preserve">
+    <value>Receive SPOK</value>
+  </data>
+  <data name="ReportErrorMessage" xml:space="preserve">
+    <value>Please report the error message in the text box to us.</value>
+  </data>
+  <data name="RPC" xml:space="preserve">
+    <value>RPC</value>
+  </data>
+  <data name="RpcStatusInvalidUrl" xml:space="preserve">
+    <value>Warning：RPC address is not a valid URL address</value>
+  </data>
+  <data name="RpcStatusTestFailed" xml:space="preserve">
+    <value>Status: test failed</value>
+  </data>
+  <data name="RpcStatusTesting" xml:space="preserve">
+    <value>Status: testing...</value>
+  </data>
+  <data name="RpcStatusTestSuccess" xml:space="preserve">
+    <value>Status: test successful</value>
+  </data>
+  <data name="RpcStatusWaitingTest" xml:space="preserve">
+    <value>Status: waiting test...</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="SaveSuccessful" xml:space="preserve">
+    <value>Save Successful</value>
+  </data>
+  <data name="SaveSuccessfulMessage" xml:space="preserve">
+    <value>Please close wallet and restart.</value>
+  </data>
+  <data name="Security" xml:space="preserve">
+    <value>Security</value>
+  </data>
+  <data name="SelectAssets" xml:space="preserve">
+    <value>Select Assets</value>
+  </data>
+  <data name="SelectToken" xml:space="preserve">
+    <value>Select Token</value>
+  </data>
+  <data name="Sended" xml:space="preserve">
+    <value>Sent</value>
+  </data>
+  <data name="SendEmailReportError" xml:space="preserve">
+    <value>Send E-mail</value>
+  </data>
+  <data name="SendFailed" xml:space="preserve">
+    <value>Send Failed.</value>
+  </data>
+  <data name="SendTransaction" xml:space="preserve">
+    <value>Send Transaction</value>
+  </data>
+  <data name="SetPassword" xml:space="preserve">
+    <value>Set Password</value>
+  </data>
+  <data name="Setting" xml:space="preserve">
+    <value>SETTING</value>
+  </data>
+  <data name="SomethingWentWrong" xml:space="preserve">
+    <value>Oops! Something went wrong.</value>
+  </data>
+  <data name="StakingRequired" xml:space="preserve">
+    <value>Staking Required</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="StartInitDb" xml:space="preserve">
+    <value>Start initialization database...</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="SyncFailed" xml:space="preserve">
+    <value>Sync Failed</value>
+  </data>
+  <data name="Syncing" xml:space="preserve">
+    <value>Syncing...</value>
+  </data>
+  <data name="SyncTip" xml:space="preserve">
+    <value>Synchronized lost blocks, balances and transactions may not be accurate</value>
+  </data>
+  <data name="Test" xml:space="preserve">
+    <value>Test</value>
+  </data>
+  <data name="TestingAndSaving" xml:space="preserve">
+    <value>Testing and Saving...</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="ToAddress" xml:space="preserve">
+    <value>To Address</value>
+  </data>
+  <data name="TokenSymbol" xml:space="preserve">
+    <value>Token Symbol</value>
+  </data>
+  <data name="TotalAmount" xml:space="preserve">
+    <value>Total Amount</value>
+  </data>
+  <data name="TotalBalance" xml:space="preserve">
+    <value>Total Balance</value>
+  </data>
+  <data name="TotalCount" xml:space="preserve">
+    <value>Count</value>
+  </data>
+  <data name="TotalSupply" xml:space="preserve">
+    <value>Total Supply</value>
+  </data>
+  <data name="Transfer" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="TxStatusCompleted" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="TxStatusFailed" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="TxStatusPending" xml:space="preserve">
+    <value>Pending</value>
+  </data>
+  <data name="UploadCSV" xml:space="preserve">
+    <value>Upload CSV File</value>
+  </data>
+  <data name="UseOfflineWallet" xml:space="preserve">
+    <value>Open Wallet Use Offline Mode</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="ViewinExplorer" xml:space="preserve">
+    <value>View in Explorer</value>
+  </data>
+  <data name="WaitClose" xml:space="preserve">
+    <value>Please don't close the computer until this window closes</value>
+  </data>
+  <data name="WalletHasDeleted" xml:space="preserve">
+    <value>has deleted</value>
+  </data>
+  <data name="WalletNotFound" xml:space="preserve">
+    <value>Wallet Not Found</value>
+  </data>
+  <data name="Wallets" xml:space="preserve">
+    <value>WALLETS</value>
+  </data>
+  <data name="WalletSelect" xml:space="preserve">
+    <value>Select Wallet</value>
+  </data>
+  <data name="WalletVersion" xml:space="preserve">
+    <value>Wallet Version</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="WrittenMnemonims" xml:space="preserve">
+    <value>I've written mnemonims</value>
+  </data>
+</root>

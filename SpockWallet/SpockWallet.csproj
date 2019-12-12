@@ -343,12 +343,6 @@
     <None Update="Solidity-Mode.xshd">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Spock\spock_linux_amd64_v2.1.0">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Spock\spock_win64_v2.1.0.exe">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="Views\SecurityWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>

@@ -163,7 +163,7 @@ namespace SpockWallet
                 // hack because of this: https://github.com/dotnet/corefx/issues/10361
                 if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
                 {
-                    NodeProcess = Process.Start(new ProcessStartInfo("./Spock/spock_win64_v2.1.0.exe", "--testnet console")
+                    NodeProcess = Process.Start(new ProcessStartInfo("./Spock/spock_win64_v2.1.2.exe", "console")
                     {
                         CreateNoWindow = true,
                         RedirectStandardInput = true,
@@ -172,7 +172,7 @@ namespace SpockWallet
                 }
                 else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
                 {
-                    NodeProcess = Process.Start(new ProcessStartInfo("./Spock/spock_linux_amd64_v2.1.0", "--testnet console")
+                    NodeProcess = Process.Start(new ProcessStartInfo("./Spock/spock_linux_amd64_v2.1.2", "console")
                     {
                         CreateNoWindow = true,
                         RedirectStandardInput = true,

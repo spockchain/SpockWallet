@@ -21,8 +21,8 @@ namespace SpockWallet.ViewModels.PoolModels
     public class PlotIdManagerWindowsViewModel : ViewModelBase
     {
         public const string PlotIdManagerABI = "[{\"type\":\"function\",\"name\":\"getBeneficiary\",\"inputs\":[{\"name\":\"plotID\",\"type\":\"uint64\",\"components\":null,\"indexed\":null}],\"outputs\":[{\"name\":\"\",\"type\":\"address\",\"components\":null}],\"payable\":false,\"stateMutability\":\"view\",\"constant\":true,\"anonymous\":null},{\"type\":\"function\",\"name\":\"setOwner\",\"inputs\":[{\"name\":\"plotID\",\"type\":\"uint64\",\"components\":null,\"indexed\":null},{\"name\":\"newOwner\",\"type\":\"address\",\"components\":null,\"indexed\":null}],\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"constant\":false,\"anonymous\":null},{\"type\":\"function\",\"name\":\"setBeneficiary\",\"inputs\":[{\"name\":\"plotID\",\"type\":\"uint64\",\"components\":null,\"indexed\":null},{\"name\":\"beneficiary\",\"type\":\"address\",\"components\":null,\"indexed\":null}],\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"constant\":false,\"anonymous\":null},{\"type\":\"function\",\"name\":\"getOwner\",\"inputs\":[{\"name\":\"plotID\",\"type\":\"uint64\",\"components\":null,\"indexed\":null}],\"outputs\":[{\"name\":\"\",\"type\":\"address\",\"components\":null}],\"payable\":false,\"stateMutability\":\"view\",\"constant\":true,\"anonymous\":null},{\"type\":\"constructor\",\"name\":null,\"inputs\":[],\"outputs\":null,\"payable\":false,\"stateMutability\":\"nonpayable\",\"constant\":null,\"anonymous\":null}]";
-        //public const string PlotIdManagerAddress = "0x1112b0cb6fe165dfb6726c5396b94ca35718a7f1";
-        public const string PlotIdManagerAddress = "0x46673fDb142B2B3Cdd24Ac7739c6143c2B30C78E";
+        public const string PlotIdManagerAddress = "0x1112b0cb6fe165dfb6726c5396b94ca35718a7f1";
+        //public const string PlotIdManagerAddress = "0x46673fDb142B2B3Cdd24Ac7739c6143c2B30C78E";
 
         private readonly Account _account;
 

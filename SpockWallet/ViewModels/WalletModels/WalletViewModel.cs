@@ -20,6 +20,7 @@ using SkiaSharp;
 using Avalonia.Skia;
 using SpockWallet.Events;
 using SpockWallet.ViewModels.TransactionModels;
+using Nethereum.Web3.Accounts;
 
 namespace SpockWallet.ViewModels.WalletModels
 {
@@ -129,6 +130,12 @@ namespace SpockWallet.ViewModels.WalletModels
         public async void CopyPlotid()
         {
             await Application.Current.Clipboard.SetTextAsync(Plotid);
+        }
+
+        public void BindPlot()
+        {
+            PlotIdManagerWindow plotIdManagerWindows = new PlotIdManagerWindow(new Account(_wallet.PrivateKey));
+            plotIdManagerWindows.Show();
         }
 
         public async void Send()

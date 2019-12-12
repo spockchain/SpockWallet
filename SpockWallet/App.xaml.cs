@@ -9,7 +9,7 @@ namespace SpockWallet
         public const int MediumSyncTime = 5000;
         public const int SlowSyncTime = 30000;
 
-        public const string Version = "v1.1.0";
+        public const string Version = "v1.1.1";
         public static int SyncTimeSpan = SlowSyncTime;
 
         public override void Initialize()

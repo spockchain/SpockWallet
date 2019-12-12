@@ -124,6 +124,42 @@ namespace SpockWallet.Localizations {
         }
         
         /// <summary>
+        ///   查找类似 Pool Address 的本地化字符串。
+        /// </summary>
+        internal static string Beneficiary {
+            get {
+                return ResourceManager.GetString("Beneficiary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Bind 的本地化字符串。
+        /// </summary>
+        internal static string Bind {
+            get {
+                return ResourceManager.GetString("Bind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Bind Plot 的本地化字符串。
+        /// </summary>
+        internal static string BindPlot {
+            get {
+                return ResourceManager.GetString("BindPlot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 100 SPOK consumed per binding 的本地化字符串。
+        /// </summary>
+        internal static string BindPlotWarning {
+            get {
+                return ResourceManager.GetString("BindPlotWarning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Block 的本地化字符串。
         /// </summary>
         internal static string Block {
@@ -228,6 +264,33 @@ namespace SpockWallet.Localizations {
         internal static string Contract {
             get {
                 return ResourceManager.GetString("Contract", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Contract Function Call Failed 的本地化字符串。
+        /// </summary>
+        internal static string ContractCallFailed {
+            get {
+                return ResourceManager.GetString("ContractCallFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Contract Function Call Transaction Send 的本地化字符串。
+        /// </summary>
+        internal static string ContractCallSuccess {
+            get {
+                return ResourceManager.GetString("ContractCallSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 The contract call transaction has been sent. Please do not bind again until it is confirmed 的本地化字符串。
+        /// </summary>
+        internal static string ContractCallSuccessText {
+            get {
+                return ResourceManager.GetString("ContractCallSuccessText", resourceCulture);
             }
         }
         
@@ -696,6 +759,15 @@ namespace SpockWallet.Localizations {
         internal static string Or {
             get {
                 return ResourceManager.GetString("Or", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Owner 的本地化字符串。
+        /// </summary>
+        internal static string Owner {
+            get {
+                return ResourceManager.GetString("Owner", resourceCulture);
             }
         }
         

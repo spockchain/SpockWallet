@@ -138,6 +138,18 @@
   <data name="BatchTransfer" xml:space="preserve">
     <value>Batch Transfer</value>
   </data>
+  <data name="Beneficiary" xml:space="preserve">
+    <value>Pool Address</value>
+  </data>
+  <data name="Bind" xml:space="preserve">
+    <value>Bind</value>
+  </data>
+  <data name="BindPlot" xml:space="preserve">
+    <value>Bind Plot</value>
+  </data>
+  <data name="BindPlotWarning" xml:space="preserve">
+    <value>100 SPOK consumed per binding</value>
+  </data>
   <data name="Block" xml:space="preserve">
     <value>Block</value>
   </data>
@@ -173,6 +185,15 @@
   </data>
   <data name="Contract" xml:space="preserve">
     <value>Contract</value>
+  </data>
+  <data name="ContractCallFailed" xml:space="preserve">
+    <value>Contract Function Call Failed</value>
+  </data>
+  <data name="ContractCallSuccess" xml:space="preserve">
+    <value>Contract Function Call Transaction Send</value>
+  </data>
+  <data name="ContractCallSuccessText" xml:space="preserve">
+    <value>The contract call transaction has been sent. Please do not bind again until it is confirmed</value>
   </data>
   <data name="ContractName" xml:space="preserve">
     <value>Contract Name</value>
@@ -329,6 +350,9 @@
   </data>
   <data name="Or" xml:space="preserve">
     <value>———————————— or ————————————</value>
+  </data>
+  <data name="Owner" xml:space="preserve">
+    <value>Owner</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Password</value>

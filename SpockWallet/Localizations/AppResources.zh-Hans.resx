@@ -138,6 +138,18 @@
   <data name="BatchTransfer" xml:space="preserve">
     <value>批量转账</value>
   </data>
+  <data name="Beneficiary" xml:space="preserve">
+    <value>矿池地址</value>
+  </data>
+  <data name="Bind" xml:space="preserve">
+    <value>绑定</value>
+  </data>
+  <data name="BindPlot" xml:space="preserve">
+    <value>绑定矿池</value>
+  </data>
+  <data name="BindPlotWarning" xml:space="preserve">
+    <value>每次绑定需要消耗100 SPOK</value>
+  </data>
   <data name="Block" xml:space="preserve">
     <value>区块</value>
   </data>
@@ -173,6 +185,15 @@
   </data>
   <data name="Contract" xml:space="preserve">
     <value>智能合约</value>
+  </data>
+  <data name="ContractCallFailed" xml:space="preserve">
+    <value>合约方法调用交易失败</value>
+  </data>
+  <data name="ContractCallSuccess" xml:space="preserve">
+    <value>合约方法调用交易已发送</value>
+  </data>
+  <data name="ContractCallSuccessText" xml:space="preserve">
+    <value>已向链上发送一笔合约调用交易，请在交易历史中查看，该交易未经确认之前，请勿重复绑定。</value>
   </data>
   <data name="ContractName" xml:space="preserve">
     <value>合约名称</value>
@@ -329,6 +350,9 @@
   </data>
   <data name="Or" xml:space="preserve">
     <value>———————————— 或 ————————————</value>
+  </data>
+  <data name="Owner" xml:space="preserve">
+    <value>所有者</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>密码</value>

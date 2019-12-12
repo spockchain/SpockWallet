@@ -79,7 +79,10 @@ namespace SpockWallet.Services
 
         public static string ConvertSpockAddress(this string address)
         {
-            return "SPOCK-" + address.Substring(2);
+            if (address.StartsWith("0x"))
+                return "SPOCK-" + address.Remove(0, 2);
+            else
+                return address;
         }
 
         public static Wallet CreateWallet()

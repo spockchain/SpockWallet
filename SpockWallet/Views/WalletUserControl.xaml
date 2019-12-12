@@ -38,6 +38,9 @@
               <StackPanel Margin="0,5,0,0" Orientation="Horizontal">
                 <TextBlock VerticalAlignment="Center" Foreground="#444444" Text="Plot Id:"/>
                 <TextBlock VerticalAlignment="Center" Foreground="#000000" Text="{Binding Plotid}" Margin="8,0,0,0"/>
+                <Button Command="{Binding BindPlot}" BorderThickness="0" Background="Transparent">
+                  <Image Width="14" Height="14" Source="resm:SpockWallet.Assets.bind.png?assembly=SpockWallet"/>
+                </Button>
                 <Button Command="{Binding CopyPlotid}" BorderThickness="0" Background="Transparent">
                   <Image Width="14" Height="14" Source="resm:SpockWallet.Assets.copy_black.png?assembly=SpockWallet"/>
                 </Button>
